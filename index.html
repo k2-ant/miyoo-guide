@@ -4,58 +4,46 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0b0118">
-<title>The Collection — A Field Guide to Your Handheld</title>
+<title>The Collection — Your Handheld's Greatest Hits</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#0b0118; --ink:#f3eaff; --muted:#b39ddb;
-    --cyan:#27e7ff; --pink:#ff2e88; --yellow:#ffd23f; --green:#41f7a7; --purple:#a06bff;
-    --card:#1a0a3a; --line:#3a1d6e;
-  }
+  :root{--bg:#0b0118;--ink:#f3eaff;--muted:#b39ddb;--cyan:#27e7ff;--pink:#ff2e88;--yellow:#ffd23f;--green:#41f7a7;--purple:#a06bff;--card:#1a0a3a;--line:#3a1d6e}
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;background:
-      radial-gradient(1200px 600px at 80% -10%, #2a0a4f 0%, transparent 60%),
-      radial-gradient(900px 500px at 0% 8%, #15234f 0%, transparent 55%), var(--bg);
-    color:var(--ink);font-family:'Inter',system-ui,-apple-system,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
-  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;
-    background:repeating-linear-gradient(transparent 0 2px,rgba(0,0,0,.18) 2px 3px);mix-blend-mode:overlay;opacity:.45}
+  body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#2a0a4f 0,transparent 60%),radial-gradient(900px 500px at 0% 8%,#15234f 0,transparent 55%),var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;background:repeating-linear-gradient(transparent 0 2px,rgba(0,0,0,.18) 2px 3px);mix-blend-mode:overlay;opacity:.45}
   .wrap{max-width:1080px;margin:0 auto;padding:0 20px;position:relative;z-index:2}
   a{color:var(--cyan);text-decoration:none}
   .muted{color:var(--muted)}
 
-  /* NAV */
-  nav.jump{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
-    background:rgba(11,1,24,.82);border-bottom:1px solid var(--line)}
-  nav.jump .scroll{display:flex;gap:8px;overflow-x:auto;padding:10px 16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  nav.jump{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);background:rgba(11,1,24,.82);border-bottom:1px solid var(--line)}
+  nav.jump .scroll{display:flex;gap:8px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
   nav.jump .scroll::-webkit-scrollbar{display:none}
-  nav.jump a{flex:0 0 auto;font-size:12.5px;font-weight:700;color:var(--ink);background:var(--card);
-    border:1px solid var(--line);border-radius:20px;padding:7px 13px;white-space:nowrap}
+  nav.jump a{flex:0 0 auto;font-size:12.5px;font-weight:700;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:20px;padding:7px 13px;white-space:nowrap}
   nav.jump a:hover{border-color:var(--cyan);color:var(--cyan)}
 
-  /* HERO */
-  header.hero{padding:54px 0 30px;text-align:center}
+  header.hero{padding:54px 0 28px;text-align:center}
   .kicker{font-family:'Press Start 2P';font-size:11px;color:var(--yellow);letter-spacing:1px}
-  h1.logo{font-family:'Press Start 2P';font-size:clamp(24px,6vw,52px);line-height:1.25;margin:18px 0 6px;
-    color:#fff;text-shadow:3px 3px 0 var(--pink),6px 6px 0 var(--cyan)}
-  .hero p.sub{font-size:clamp(15px,2.4vw,21px);color:var(--muted);max-width:680px;margin:14px auto 0}
-  .stat-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:24px 0 4px}
+  h1.logo{font-family:'Press Start 2P';font-size:clamp(24px,6vw,50px);line-height:1.25;margin:18px 0 8px;color:#fff;text-shadow:3px 3px 0 var(--pink),6px 6px 0 var(--cyan)}
+  .hero p.sub{font-size:clamp(15px,2.4vw,20px);color:var(--ink);max-width:680px;margin:14px auto 0;font-weight:600}
+  .hero p.sub b{color:var(--green)}
+  .stat-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:22px 0 4px}
   .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 15px}
   .stat b{font-family:'Bebas Neue';font-size:28px;color:var(--green);display:block;line-height:1}
   .stat span{font-size:11px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase}
 
-  /* SECTIONS */
   section{padding:46px 0;border-bottom:1px solid var(--line)}
   .eyebrow{font-family:'Press Start 2P';font-size:10px;color:var(--cyan);letter-spacing:1px}
-  h2{font-family:'Bebas Neue';font-size:clamp(32px,6vw,56px);letter-spacing:1px;margin:6px 0 4px;line-height:.95}
+  h2{font-family:'Bebas Neue';font-size:clamp(34px,6.5vw,62px);letter-spacing:1px;margin:6px 0 4px;line-height:.95}
   h2 .em{color:var(--pink)}
-  .lead{color:var(--muted);max-width:760px;font-size:16px;margin:0 0 22px}
+  .lead{color:var(--muted);max-width:780px;font-size:16px;margin:0 0 24px}
 
+  /* generic cards */
   .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(168px,1fr))}
-  .card{background:linear-gradient(180deg,var(--card),#11062b);border:1px solid var(--line);border-radius:14px;
-    overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
+  .grid3{display:grid;gap:14px;grid-template-columns:repeat(3,1fr)}
+  .card{background:linear-gradient(180deg,var(--card),#11062b);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
   .card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(160,107,255,.35);border-color:var(--purple)}
   .art{aspect-ratio:1/1;background:#070213;display:flex;align-items:center;justify-content:center;padding:9px}
   .art img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 4px 10px rgba(0,0,0,.6))}
@@ -65,69 +53,68 @@
   .card .blurb{color:var(--muted);font-size:13px;margin-top:7px}
   .tag{display:inline-block;font-size:10.5px;font-weight:700;color:var(--bg);background:var(--cyan);padding:2px 8px;border-radius:20px;margin-top:9px}
   .tag.hack{background:var(--pink);color:#fff}
-  .first{border-left:3px solid var(--green)} /* legacy highlight */
 
-  .feature{display:grid;grid-template-columns:150px 1fr;gap:18px;align-items:center;
-    background:var(--card);border:1px solid var(--line);border-radius:16px;padding:15px;margin:12px 0}
-  .feature img{width:100%;border-radius:10px;background:#070213}
-  .feature h3{margin:0 0 3px;font-size:20px;font-family:'Bebas Neue';letter-spacing:.5px;color:#fff}
-  .feature .sys{font-size:11px;color:var(--yellow);text-transform:uppercase}
-  .feature p{margin:7px 0 0;color:var(--muted);font-size:14.5px}
+  /* TOP 10 */
+  .legend{display:grid;grid-template-columns:56px 104px 1fr;gap:16px;align-items:center;background:linear-gradient(90deg,#1c0a3f,#11062b);border:1px solid var(--line);border-radius:14px;padding:14px;margin:11px 0}
+  .legend:hover{border-color:var(--yellow)}
+  .legend .rank{font-family:'Press Start 2P';font-size:23px;color:var(--yellow);text-align:center;text-shadow:2px 2px 0 var(--pink)}
+  .legend img{width:100%;border-radius:8px;background:#070213}
+  .legend h3{margin:0;font-family:'Bebas Neue';font-size:25px;color:#fff;letter-spacing:.5px;line-height:1}
+  .legend .sys{font-size:11px;color:var(--yellow);text-transform:uppercase}
+  .legend p{margin:6px 0 0;color:var(--ink);font-size:14.5px}
 
-  /* ONIONOS */
+  /* GENRE PILLS + BLOCKS */
+  .genre-pills{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 22px}
+  .pill{background:var(--card);border:1px solid var(--line);border-radius:30px;padding:8px 15px;font-weight:700;font-size:13.5px;color:var(--ink)}
+  .pill:hover{border-color:var(--cyan);color:var(--cyan)}
+  .genre{background:linear-gradient(180deg,#160830,#0d0322);border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0;scroll-margin-top:64px}
+  .genre-head h3{font-family:'Bebas Neue';font-size:27px;margin:0;color:#fff;letter-spacing:.5px}
+  .genre-head p{margin:2px 0 14px;color:var(--muted);font-size:14px}
+  .also{margin:14px 0 0;font-size:13.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+  .also b{color:var(--green)}
+
+  .subhead{font-family:'Bebas Neue';font-size:23px;color:var(--green);letter-spacing:.6px;margin:26px 0 12px;border-bottom:1px solid var(--line);padding-bottom:6px}
+  .subhead small{font-family:'Inter';font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:0;margin-left:8px}
+  .box{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--cyan);border-radius:10px;padding:14px}
+  .box.c2{border-left-color:var(--pink)}.box.c3{border-left-color:var(--green)}.box.c4{border-left-color:var(--yellow)}
+  .box h4{margin:0 0 5px;font-size:16px;color:#fff}
+  .box .star{font-size:10.5px;color:var(--green);font-weight:800;margin-left:6px}
+  kbd{font-family:'Press Start 2P';font-size:9px;background:#000;border:1px solid var(--purple);border-radius:5px;padding:3px 6px;color:var(--green)}
   .os{display:grid;grid-template-columns:1fr .8fr;gap:20px;align-items:start}
   .os-steps{display:grid;gap:12px}
-  .box{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--cyan);border-radius:10px;padding:14px}
-  .box.c2{border-left-color:var(--pink)} .box.c3{border-left-color:var(--green)} .box.c4{border-left-color:var(--yellow)}
-  .box h4{margin:0 0 5px;font-size:16px;color:#fff}
-  .box .star{font-size:10.5px;color:var(--green);font-weight:800;margin-left:6px;letter-spacing:.5px}
-  kbd{font-family:'Press Start 2P';font-size:9px;background:#000;border:1px solid var(--purple);border-radius:5px;padding:3px 6px;color:var(--green)}
   .os-cheat{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;text-align:center}
   .os-cheat img{width:100%;max-width:420px;border-radius:8px}
   .os-cheat figcaption{font-size:12.5px;color:var(--muted);margin-top:9px}
-
-  /* HISTORY ERAS */
   .eras{display:grid;gap:14px}
-  .era{display:grid;grid-template-columns:110px 1fr;gap:16px;align-items:center;
-    background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px}
+  .era{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px}
   .era img{width:100%;border-radius:8px;background:#070213}
-  .era .yr{font-family:'Bebas Neue';font-size:26px;color:var(--yellow);line-height:1}
-  .era h4{margin:2px 0 4px;font-size:18px;color:#fff}
-  .era p{margin:0;color:var(--muted);font-size:14px}
-
+  .era .yr{font-family:'Bebas Neue';font-size:24px;color:var(--yellow);line-height:1}
+  .era h4{margin:2px 0 4px;font-size:17px;color:#fff}
+  .era p{margin:0;color:var(--muted);font-size:13.5px}
   .chips{display:flex;flex-wrap:wrap;gap:9px}
   .chip{background:var(--card);border:1px solid var(--line);border-radius:30px;padding:9px 15px;font-size:13.5px}
   .chip b{color:var(--green)}
-
   .banner{border-radius:16px;padding:26px;border:1px dashed var(--purple);background:linear-gradient(120deg,#1c0a3f,#0e1f44)}
   .banner h2{margin-top:0}
-  .subhead{font-family:'Bebas Neue';font-size:23px;color:var(--green);letter-spacing:.6px;margin:26px 0 12px;
-    border-bottom:1px solid var(--line);padding-bottom:6px}
-  .subhead small{font-family:'Inter';font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:0;margin-left:8px}
   footer{padding:40px 0 64px;text-align:center;color:var(--muted)}
   footer .big{font-family:'Press Start 2P';font-size:13px;color:var(--yellow);margin-bottom:10px}
 
-  /* MOBILE */
   @media (max-width:640px){
-    .wrap{padding:0 14px}
-    section{padding:34px 0}
+    .wrap{padding:0 14px} section{padding:34px 0}
     .os{grid-template-columns:1fr}
-    .feature{grid-template-columns:1fr;text-align:center}
-    .feature img{max-width:140px;margin:0 auto}
     .grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
-    .era{grid-template-columns:84px 1fr;gap:12px;padding:11px}
-    .stat b{font-size:23px}
+    .grid3{gap:9px}
+    .legend{grid-template-columns:36px 74px 1fr;gap:11px;padding:11px}
+    .legend .rank{font-size:17px} .legend h3{font-size:21px}
+    .era{grid-template-columns:74px 1fr;gap:11px}
     h1.logo{text-shadow:2px 2px 0 var(--pink),4px 4px 0 var(--cyan)}
   }
-
-  /* PRINT */
   @media print{
-    body{background:#fff;color:#111}
-    body::before,nav.jump{display:none}
-    a{color:#111} h1.logo{color:#111;text-shadow:none} h2,h2 .em{color:#111}
-    .card,.feature,.box,.banner,.stat,.chip,.era,.os-cheat{border-color:#bbb;background:#fafafa;box-shadow:none;break-inside:avoid}
-    .art,.feature img,.era img{background:#fff}
-    .lead,.muted,.card .blurb,.feature p,.eyebrow,.kicker,.era p,.os-cheat figcaption{color:#333}
+    body{background:#fff;color:#111} body::before,nav.jump{display:none}
+    a,h1.logo,h2,h2 .em{color:#111} h1.logo{text-shadow:none}
+    .card,.legend,.genre,.box,.banner,.stat,.chip,.era,.os-cheat,.pill{border-color:#bbb;background:#fafafa;box-shadow:none;break-inside:avoid}
+    .art,.legend img,.era img{background:#fff}
+    .lead,.muted,.card .blurb,.legend p,.era p,.also,.os-cheat figcaption,.genre-head p{color:#333}
     section{border-color:#ddd;padding:22px 0}
   }
 </style>
@@ -135,306 +122,219 @@
 <body>
 
 <nav class="jump"><div class="scroll">
-  <a href="#how">How to Play</a><a href="#start">Start Here</a><a href="#legends">Legends</a>
-  <a href="#history">Game History</a><a href="#adventure">Adventure</a><a href="#platformers">Platformers</a>
-  <a href="#rungun">Run &amp; Gun</a><a href="#brawlers">Brawlers</a><a href="#fighters">Fighters</a>
-  <a href="#racing">Racing</a><a href="#sports">Sports</a><a href="#strategy">Strategy</a>
-  <a href="#rpgs">RPGs</a><a href="#horror">Horror</a><a href="#marvel">Heroes</a>
-  <a href="#disney">Disney</a><a href="#simpsons">Simpsons</a><a href="#hacks">ROM Hacks</a>
-  <a href="#ports">Ports</a><a href="#scummvm">Point &amp; Click</a><a href="#mood">By Mood</a>
+  <a href="#how">How to Play</a><a href="#top10">Top 10</a><a href="#genres">By Genre</a>
+  <a href="#collections">Collections</a><a href="#hacks">ROM Hacks</a><a href="#ports">Ports</a>
+  <a href="#scummvm">Point &amp; Click</a><a href="#history">Game History</a><a href="#mood">By Mood</a>
 </div></nav>
 
 <header class="hero"><div class="wrap">
   <div class="kicker">◄ INSERT COIN ►</div>
   <h1 class="logo">THE COLLECTION</h1>
-  <p class="sub">Three decades of the greatest games ever made — hand-picked, tuned, and
-  loaded into one machine that fits in your pocket. This is your field guide.</p>
+  <p class="sub">You're holding <b>the greatest games ever made</b> — three decades of legends,
+  hand-picked and ready to play. This is your map to the good stuff. Pick anything. Press start.</p>
   <div class="stat-row">
     <div class="stat"><b>280+</b><span>Games</span></div>
     <div class="stat"><b>10</b><span>Systems</span></div>
-    <div class="stat"><b>30</b><span>Years of legacy</span></div>
+    <div class="stat"><b>30</b><span>Years of legends</span></div>
     <div class="stat"><b>20+</b><span>Fan-made gems</span></div>
   </div>
 </div></header>
 
-<!-- ONIONOS -->
+<!-- HOW TO PLAY -->
 <section id="how"><div class="wrap">
-  <div class="eyebrow">ONIONOS — YOUR MENU SYSTEM</div>
+  <div class="eyebrow">60 SECONDS, THEN YOU'RE IN</div>
   <h2>Working <span class="em">the Menus</span></h2>
-  <p class="lead">The software is called OnionOS. The whole thing in four moves.</p>
+  <p class="lead">The software's called OnionOS. That's the whole thing in four moves.</p>
   <div class="os">
     <div class="os-steps">
-      <div class="box"><h4>🎮 Find a game</h4>Games are grouped by console. Tap <kbd>L</kbd>/<kbd>R</kbd>
-        (shoulders) to flip between <b>Recents</b>, <b>Favorites</b> &amp; each system. <kbd>A</kbd> plays, <kbd>B</kbd> backs out.</div>
-      <div class="box c3"><h4>💾 Save anywhere<span class="star">★ THE BIG ONE</span></h4>Hold <kbd>MENU</kbd> + the
-        <b>Save State</b> button to bookmark the exact moment. Hold <kbd>MENU</kbd> + <b>Load State</b> to jump back. Save before bosses — or to quit mid-level.</div>
-      <div class="box c2"><h4>⏯️ Tap <kbd>MENU</kbd> = GameSwitcher</h4>One quick tap flips between your recent games. <i>Hold</i> it for the hotkeys →</div>
-      <div class="box c4"><h4>⚡ Good to know</h4>Hold <kbd>MENU</kbd>+ for Fast-Forward, Quick Menu, Exit &amp; screenshots.
-        Tap <b>POWER</b> to sleep/instant-resume. Multi-disc PlayStation: <b>MENU → Disc Control</b>.</div>
+      <div class="box"><h4>🎮 Find a game</h4>Sorted by console. Tap <kbd>L</kbd>/<kbd>R</kbd> to flip between
+        <b>Recents</b>, <b>Favorites</b> &amp; each system. <kbd>A</kbd> plays, <kbd>B</kbd> backs out.</div>
+      <div class="box c3"><h4>💾 Save anywhere<span class="star">★ THE BIG ONE</span></h4>Hold <kbd>MENU</kbd> + <b>Save State</b>
+        to bookmark the exact moment; <kbd>MENU</kbd> + <b>Load State</b> jumps back. Save before bosses, or to quit mid-level.</div>
+      <div class="box c2"><h4>⏯️ Tap <kbd>MENU</kbd> = GameSwitcher</h4>One tap flips between recent games. <i>Hold</i> it for hotkeys →</div>
+      <div class="box c4"><h4>⚡ Good to know</h4>Hold <kbd>MENU</kbd>+ for Fast-Forward &amp; the Quick Menu. Tap <b>POWER</b> to sleep/resume.</div>
     </div>
-    <figure class="os-cheat">
-      <img src="images/onion-shortcuts.png" alt="OnionOS MENU button shortcut map">
-      <figcaption>Hold <b>MENU</b>, then tap a button. <span class="muted">Map via OnionUI</span></figcaption>
-    </figure>
+    <figure class="os-cheat"><img src="images/onion-shortcuts.png" alt="OnionOS shortcut map">
+      <figcaption>Hold <b>MENU</b>, then tap a button. <span class="muted">Map via OnionUI</span></figcaption></figure>
   </div>
 </div></section>
 
-<!-- START -->
-<section id="start"><div class="wrap">
-  <div class="eyebrow">NEW HERE? START WITH THESE</div>
-  <h2>The <span class="em">First Five</span></h2>
-  <p class="lead">Don't overthink it. Boot any of these and you'll get what the fuss is about.</p>
-  <div class="grid">
-    <div class="card"><div class="art"><img src="images/super-mario-world.png" alt=""></div><div class="meta"><div class="name">Super Mario World</div><div class="sys">SNES</div><div class="blurb">The platformer every other is still chasing. Find a cape — fly.</div></div></div>
-    <div class="card"><div class="art"><img src="images/zelda-alttp.png" alt=""></div><div class="meta"><div class="name">Zelda: A Link to the Past</div><div class="sys">SNES</div><div class="blurb">Wrote the rulebook every Zelda still follows.</div></div></div>
-    <div class="card"><div class="art"><img src="images/sonic-3-complete.png" alt=""></div><div class="meta"><div class="name">Sonic 3 Complete</div><div class="sys">Genesis</div><div class="blurb">Sonic at his absolute best — the definitive cut.</div><span class="tag hack">ROM HACK</span></div></div>
-    <div class="card"><div class="art"><img src="images/hack-crystal-clear.png" alt=""></div><div class="meta"><div class="name">Pokémon Crystal Clear</div><div class="sys">Game Boy Color</div><div class="blurb">Pokémon, but open-world. Go anywhere from the start.</div><span class="tag hack">ROM HACK</span></div></div>
-    <div class="card"><div class="art"><img src="images/crash-warped.png" alt=""></div><div class="meta"><div class="name">Crash Bandicoot: Warped</div><div class="sys">PlayStation</div><div class="blurb">3D platforming at full throttle — jet-skis and all.</div></div></div>
-    <div class="card"><div class="art"><img src="images/streets-of-rage-2.png" alt=""></div><div class="meta"><div class="name">Streets of Rage 2</div><div class="sys">Genesis</div><div class="blurb">The greatest brawler ever — and maybe the best soundtrack too.</div></div></div>
+<!-- TOP 10 -->
+<section id="top10"><div class="wrap">
+  <div class="eyebrow">★ IF YOU PLAY NOTHING ELSE</div>
+  <h2>The <span class="em">Top 10</span></h2>
+  <p class="lead">Out of hundreds of games, these are the ten you owe it to yourself to play. Every one is a
+  certified, all-time, hall-of-fame classic. Start anywhere on this list and you literally cannot go wrong.</p>
+
+  <div class="legend"><div class="rank">1</div><img src="images/chrono-trigger.png" alt=""><div><h3>Chrono Trigger</h3><div class="sys">SNES</div>
+    <p>If you play <i>one</i> game on this whole device, make it this. The greatest RPG ever made — and it's not close. Time travel, a dozen endings, not a single wasted minute. It turns people who "don't like RPGs" into believers.</p></div></div>
+  <div class="legend"><div class="rank">2</div><img src="images/super-mario-world.png" alt=""><div><h3>Super Mario World</h3><div class="sys">SNES</div>
+    <p>Thirty years on, nobody's topped it. Pure, perfect joy from the very first jump. Grab a cape, take flight, and you'll understand instantly why this is the platformer everyone measures against.</p></div></div>
+  <div class="legend"><div class="rank">3</div><img src="images/zelda-alttp.png" alt=""><div><h3>Zelda: A Link to the Past</h3><div class="sys">SNES</div>
+    <p>The adventure that <i>defined</i> adventure. A massive world stuffed with secrets that still feels magical to explore. Boot it up "just to try it" and lose a whole weekend.</p></div></div>
+  <div class="legend"><div class="rank">4</div><img src="images/super-metroid.png" alt=""><div><h3>Super Metroid</h3><div class="sys">SNES</div>
+    <p>It quietly invented an entire genre. Land alone on a dead alien world and feel the wonder and dread. One of the most atmospheric games ever made — trust it and let it pull you in.</p></div></div>
+  <div class="legend"><div class="rank">5</div><img src="images/ff7.png" alt=""><div><h3>Final Fantasy VII</h3><div class="sys">PlayStation</div>
+    <p>The game that made the whole world take video games seriously. Three discs of spectacle and one story you will not forget. A cultural earthquake — and it fits in your pocket.</p></div></div>
+  <div class="legend"><div class="rank">6</div><img src="images/mgs.png" alt=""><div><h3>Metal Gear Solid</h3><div class="sys">PlayStation</div>
+    <p>Stealth, intrigue, and twists people still talk about today. It plays like an action movie you control — and it was decades ahead of everything around it. Unforgettable.</p></div></div>
+  <div class="legend"><div class="rank">7</div><img src="images/smb3.png" alt=""><div><h3>Super Mario Bros. 3</h3><div class="sys">NES</div>
+    <p>The blueprint for every platformer that came after — and still one of the very best. Raccoon suits, secret warp whistles, pure magic. This is where modern gaming was born.</p></div></div>
+  <div class="legend"><div class="rank">8</div><img src="images/earthbound.png" alt=""><div><h3>EarthBound</h3><div class="sys">SNES</div>
+    <p>A kid with a baseball bat against cosmic dread. Hilarious, strange, and secretly one of the most heartfelt games ever written. There is genuinely nothing else like it — give it an hour.</p></div></div>
+  <div class="legend"><div class="rank">9</div><img src="images/tetris.png" alt=""><div><h3>Tetris</h3><div class="sys">Game Boy</div>
+    <p>The most-played game in human history, and maybe the most perfect ever designed. "Five minutes" becomes an hour every single time. Nobody is immune. Nobody.</p></div></div>
+  <div class="legend"><div class="rank">10</div><img src="images/sotn.png" alt=""><div><h3>Castlevania: Symphony of the Night</h3><div class="sys">PlayStation</div>
+    <p>A sprawling gothic castle that's pure joy to explore and grow stronger in. So influential it named a genre. You'll never want it to end — and it goes on longer than you'd ever guess.</p></div></div>
+</div></section>
+
+<!-- GENRES -->
+<section id="genres"><div class="wrap">
+  <div class="eyebrow">PICK YOUR FLAVOR</div>
+  <h2>Browse by <span class="em">Genre</span></h2>
+  <p class="lead">Here's the quick way in: the best three of each kind, plus a peek at the deep bench behind them.
+  Whatever you're in the mood for, there's a classic waiting.</p>
+  <div class="genre-pills">
+    <a class="pill" href="#g-adventure">🗡️ Adventure</a><a class="pill" href="#g-platform">🍄 Platformers</a>
+    <a class="pill" href="#g-rpg">🐉 RPGs</a><a class="pill" href="#g-rungun">💥 Run &amp; Gun</a>
+    <a class="pill" href="#g-brawl">👊 Brawlers</a><a class="pill" href="#g-fight">🥋 Fighters</a>
+    <a class="pill" href="#g-race">🏎️ Racing</a><a class="pill" href="#g-sport">🏆 Sports</a>
+    <a class="pill" href="#g-strat">♟️ Strategy</a><a class="pill" href="#g-horror">🩸 Horror</a>
+  </div>
+
+  <div class="genre" id="g-adventure"><div class="genre-head"><h3>🗡️ Action &amp; Adventure</h3><p>Big worlds, hidden rooms, and that "just one more area" pull.</p></div>
+    <div class="grid3">
+      <div class="card"><div class="art"><img src="images/super-metroid.png" alt=""></div><div class="meta"><div class="name">Super Metroid</div><div class="sys">SNES</div><div class="blurb">The genre-definer. Get gloriously lost.</div></div></div>
+      <div class="card"><div class="art"><img src="images/sotn.png" alt=""></div><div class="meta"><div class="name">Symphony of the Night</div><div class="sys">PlayStation</div><div class="blurb">The other half of "Metroidvania."</div></div></div>
+      <div class="card"><div class="art"><img src="images/minish-cap.png" alt=""></div><div class="meta"><div class="name">Zelda: The Minish Cap</div><div class="sys">GBA</div><div class="blurb">Shrink down, explore a world within the world.</div></div></div>
+    </div>
+    <p class="also"><b>Also on board:</b> Zelda: A Link to the Past · Oracle of Ages &amp; Seasons · the original Zelda &amp; Zelda II · Metroid Fusion &amp; Zero Mission · Castlevania: Aria of Sorrow / Bloodlines / Chronicles · Tenchu 2 · Vagrant Story · Astro Boy: Omega Factor.</p>
+  </div>
+
+  <div class="genre" id="g-platform"><div class="genre-head"><h3>🍄 Platformers</h3><p>The genre that built gaming — precision, secrets, the perfect jump.</p></div>
+    <div class="grid3">
+      <div class="card"><div class="art"><img src="images/super-mario-world.png" alt=""></div><div class="meta"><div class="name">Super Mario World</div><div class="sys">SNES</div><div class="blurb">Still the best there's ever been.</div></div></div>
+      <div class="card"><div class="art"><img src="images/yoshis-island.png" alt=""></div><div class="meta"><div class="name">Yoshi's Island</div><div class="sys">SNES</div><div class="blurb">Hand-drawn and endlessly inventive.</div></div></div>
+      <div class="card"><div class="art"><img src="images/plat-mmx.png" alt=""></div><div class="meta"><div class="name">Mega Man X</div><div class="sys">SNES</div><div class="blurb">The cooler, faster reinvention. Flawless.</div></div></div>
+    </div>
+    <p class="also"><b>Also on board:</b> Super Mario All-Stars (SMB 1–3) · Donkey Kong Country 1/2/3 · Kirby Super Star &amp; Dream Land 3 · Sonic 1/2 &amp; Sonic 3 Complete · Earthworm Jim · Wario Land 4 · Mega Man X2/X3, 2–7 &amp; Zero 2–4 · Ristar · Vectorman · Super Ghouls 'n Ghosts.</p>
+  </div>
+
+  <div class="genre" id="g-rpg"><div class="genre-head"><h3>🐉 RPGs</h3><p>Whole worlds to disappear into for 40+ hours. The collection's crown jewels.</p></div>
+    <div class="grid3">
+      <div class="card"><div class="art"><img src="images/chrono-trigger.png" alt=""></div><div class="meta"><div class="name">Chrono Trigger</div><div class="sys">SNES</div><div class="blurb">The greatest RPG ever made. Period.</div></div></div>
+      <div class="card"><div class="art"><img src="images/ff7.png" alt=""></div><div class="meta"><div class="name">Final Fantasy VII</div><div class="sys">PlayStation</div><div class="blurb">The one that changed everything.</div></div></div>
+      <div class="card"><div class="art"><img src="images/earthbound.png" alt=""></div><div class="meta"><div class="name">EarthBound</div><div class="sys">SNES</div><div class="blurb">Funny, weird, unforgettable.</div></div></div>
+    </div>
+    <p class="also"><b>Also on board:</b> Final Fantasy IX &amp; Tactics · Xenogears · Chrono Cross · Suikoden II · Secret of Mana · Lufia II · Golden Sun 1 &amp; 2 · Phantasy Star IV · Super Mario RPG · Pokémon Emerald &amp; FireRed · Legend of Dragoon · Harvest Moon.</p>
+  </div>
+
+  <div class="genre" id="g-rungun"><div class="genre-head"><h3>💥 Run &amp; Gun</h3><p>Pure adrenaline — dodge everything, shoot everything, never stop moving.</p></div>
+    <div class="grid3">
+      <div class="card"><div class="art"><img src="images/rg-contra3.png" alt=""></div><div class="meta"><div class="name">Contra III</div><div class="sys">SNES</div><div class="blurb">The genre's high-water mark.</div></div></div>
+      <div class="card"><div class="art"><img src="images/rg-mslugx.png" alt=""></div><div class="meta"><div class="name">Metal Slug X</div><div class="sys">PlayStation</div><div class="blurb">The best 2D animation ever drawn.</div></div></div>
+      <div class="card"><div class="art"><img src="images/gunstar-heroes.png" alt=""></div><div class="meta"><div class="name">Gunstar Heroes</div><div class="sys">Genesis</div><div class="blurb">Treasure's dazzling masterpiece.</div></div></div>
+    </div>
+    <p class="also"><b>Also on board:</b> Contra: Hard Corps · Contra (NES) · Xeno Crisis · Metal Slug 3 (arcade).</p>
+  </div>
+
+  <div class="genre" id="g-brawl"><div class="genre-head"><h3>👊 Brawlers</h3><p>Walk right, punch everything — and it's even better with a friend.</p></div>
+    <div class="grid3">
+      <div class="card"><div class="art"><img src="images/streets-of-rage-2.png" alt=""></div><div class="meta"><div class="name">Streets of Rage 2</div><div class="sys">Genesis</div><div class="blurb">The gold standard. That soundtrack!</div></div></div>
+      <div class="card"><div class="art"><img src="images/tmnt-turtles-in-time.png" alt=""></div><div class="meta"><div class="name">Turtles in Time</div><div class="sys">SNES</div><div class="blurb">Cowabunga. The peak turtle brawler.</div></div></div>
+      <div class="card"><div class="art"><img src="images/arcade-simpsons.png" alt=""></div><div class="meta"><div class="name">The Simpsons</div><div class="sys">Arcade</div><div class="blurb">A beloved 4-player cabinet.</div></div></div>
+    </div>
+    <p class="also"><b>Also on board:</b> Final Fight · Golden Axe · Captain Commando · Sunset Riders · Comix Zone · the X-Men &amp; TMNT arcade cabinets · D&amp;D: Shadow over Mystara · Knights of the Round.</p>
+  </div>
+
+  <div class="genre" id="g-fight"><div class="genre-head"><h3>🥋 Fighters</h3><p>Learn a combo, ruin a friendship. The genre the arcades were built on.</p></div>
+    <div class="grid3">
+      <div class="card"><div class="art"><img src="images/super-street-fighter-2.png" alt=""></div><div class="meta"><div class="name">Super Street Fighter II</div><div class="sys">SNES</div><div class="blurb">Invented the modern fighter. Hadouken.</div></div></div>
+      <div class="card"><div class="art"><img src="images/tekken-3.png" alt=""></div><div class="meta"><div class="name">Tekken 3</div><div class="sys">PlayStation</div><div class="blurb">Often called the best of its era.</div></div></div>
+      <div class="card"><div class="art"><img src="images/fgt-kof98.png" alt=""></div><div class="meta"><div class="name">King of Fighters '98</div><div class="sys">Arcade</div><div class="blurb">SNK's beloved dream-match.</div></div></div>
+    </div>
+    <p class="also"><b>Also on board:</b> Mortal Kombat II &amp; Ultimate MK3 · Street Fighter Alpha 3 · Samurai Shodown II · Garou: Mark of the Wolves · Marvel vs. Capcom · X-Men vs. Street Fighter.</p>
+  </div>
+
+  <div class="genre" id="g-race"><div class="genre-head"><h3>🏎️ Racing</h3><p>Karts, F-zero machines, skateboards, supercars — foot to the floor.</p></div>
+    <div class="grid3">
+      <div class="card"><div class="art"><img src="images/super-mario-kart.png" alt=""></div><div class="meta"><div class="name">Super Mario Kart</div><div class="sys">SNES</div><div class="blurb">It invented the whole genre.</div></div></div>
+      <div class="card"><div class="art"><img src="images/ctr.png" alt=""></div><div class="meta"><div class="name">Crash Team Racing</div><div class="sys">PlayStation</div><div class="blurb">The kart racer that rivals Mario.</div></div></div>
+      <div class="card"><div class="art"><img src="images/race-gt.png" alt=""></div><div class="meta"><div class="name">Gran Turismo</div><div class="sys">PlayStation</div><div class="blurb">It changed racing games forever.</div></div></div>
+    </div>
+    <p class="also"><b>Also on board:</b> F-Zero · Mario Kart: Super Circuit · Rock N' Roll Racing · Road Rash 3 · Tony Hawk's Pro Skater 1 &amp; 2 · Twisted Metal 2 · Neo Turf Masters.</p>
+  </div>
+
+  <div class="genre" id="g-sport"><div class="genre-head"><h3>🏆 Sports &amp; the Outdoors</h3><p>From the rink to the ring to the lake — pure pick-up-and-play.</p></div>
+    <div class="grid3">
+      <div class="card"><div class="art"><img src="images/hack-nhl94.png" alt=""></div><div class="meta"><div class="name">NHL '94 (2025 rosters)</div><div class="sys">Genesis</div><div class="blurb">The hockey game all others answer to.</div></div></div>
+      <div class="card"><div class="art"><img src="images/sport-tecmo.png" alt=""></div><div class="meta"><div class="name">Tecmo Super Bowl</div><div class="sys">NES</div><div class="blurb">The most legendary football game ever.</div></div></div>
+      <div class="card"><div class="art"><img src="images/sport-nbajam.png" alt=""></div><div class="meta"><div class="name">NBA Jam: T.E.</div><div class="sys">SNES</div><div class="blurb">"He's on fire!" All dunks, all attitude.</div></div></div>
+    </div>
+    <p class="also"><b>Also on board:</b> Super Punch-Out!! &amp; Mike Tyson's Punch-Out!! · Windjammers · Mario Golf &amp; Tennis · and yes — <b>fishing</b>, with Super Black Bass.</p>
+  </div>
+
+  <div class="genre" id="g-strat"><div class="genre-head"><h3>♟️ Strategy &amp; Tactics</h3><p>For the thinkers — grid-based battles where every move counts.</p></div>
+    <div class="grid3">
+      <div class="card"><div class="art"><img src="images/strat-fft.png" alt=""></div><div class="meta"><div class="name">Final Fantasy Tactics</div><div class="sys">PlayStation</div><div class="blurb">A tactical-RPG masterpiece.</div></div></div>
+      <div class="card"><div class="art"><img src="images/strat-advwars.png" alt=""></div><div class="meta"><div class="name">Advance Wars</div><div class="sys">GBA</div><div class="blurb">Instantly fun, endlessly deep.</div></div></div>
+      <div class="card"><div class="art"><img src="images/strat-fe.png" alt=""></div><div class="meta"><div class="name">Fire Emblem</div><div class="sys">GBA</div><div class="blurb">Every choice matters — units stay down.</div></div></div>
+    </div>
+    <p class="also"><b>Also on board:</b> Final Fantasy Tactics Advance · Advance Wars 2 · Fire Emblem: Sacred Stones · SimCity 2000.</p>
+  </div>
+
+  <div class="genre" id="g-horror"><div class="genre-head"><h3>🩸 Survival Horror</h3><p>The PlayStation made gaming genuinely scary. Lights low, volume up.</p></div>
+    <div class="grid3">
+      <div class="card"><div class="art"><img src="images/horror-sh.png" alt=""></div><div class="meta"><div class="name">Silent Hill</div><div class="sys">PlayStation</div><div class="blurb">Dread that still outclasses modern horror.</div></div></div>
+      <div class="card"><div class="art"><img src="images/re2.png" alt=""></div><div class="meta"><div class="name">Resident Evil 2</div><div class="sys">PlayStation</div><div class="blurb">The one that perfected the formula.</div></div></div>
+      <div class="card"><div class="art"><img src="images/horror-re1.png" alt=""></div><div class="meta"><div class="name">Resident Evil</div><div class="sys">PlayStation</div><div class="blurb">It coined the term "survival horror."</div></div></div>
+    </div>
+    <p class="also"><b>Also on board:</b> Resident Evil 3: Nemesis · Dino Crisis 1 &amp; 2.</p>
   </div>
 </div></section>
 
-<!-- LEGENDS -->
-<section id="legends"><div class="wrap">
-  <div class="eyebrow">HALL OF FAME</div>
-  <h2>The <span class="em">Legends</span></h2>
-  <p class="lead">Not just great games — the ones that <i>changed what games could be</i>.</p>
-  <div class="feature"><img src="images/chrono-trigger.png" alt=""><div><h3>Chrono Trigger</h3><div class="sys">SNES · 1995</div>
-    <p>A dream team of RPG legends built the game everyone else still measures against. Time travel, a dozen endings, not a wasted minute. The one that converts people who "don't like RPGs."</p></div></div>
-  <div class="feature"><img src="images/super-metroid.png" alt=""><div><h3>Super Metroid</h3><div class="sys">SNES · 1994</div>
-    <p>It quietly invented an entire genre — we literally call it "Metroidvania." Drop onto a dead alien world and realize it's all one giant puzzle box.</p></div></div>
-  <div class="feature"><img src="images/ff7.png" alt=""><div><h3>Final Fantasy VII</h3><div class="sys">PlayStation · 1997</div>
-    <p>The game that made the whole world take RPGs seriously. Three discs of spectacle whose shadow still falls over the genre.</p></div></div>
-  <div class="feature"><img src="images/smb3.png" alt=""><div><h3>Super Mario Bros. 3</h3><div class="sys">NES · 1990</div>
-    <p>The blueprint for the modern platformer — raccoon suits, warp whistles, world maps — from hardware two generations older than your charger.</p></div></div>
-</div></section>
+<!-- COLLECTIONS -->
+<section id="collections"><div class="wrap">
+  <div class="eyebrow">🎟️ FOR THE FANS</div>
+  <h2>Special <span class="em">Collections</span></h2>
+  <p class="lead">Got a favorite franchise? The collection runs deep on the big ones.</p>
 
-<!-- HISTORY OF GAMING -->
-<section id="history"><div class="wrap">
-  <div class="eyebrow">⏳ HOW WE GOT HERE</div>
-  <h2>A Quick <span class="em">History of Gaming</span></h2>
-  <p class="lead">This handheld is a time machine. Here's the journey it covers, in five stops.</p>
-  <div class="eras">
-    <div class="era"><img src="images/era-atari.png" alt=""><div><div class="yr">1977</div><h4>Where it all began</h4>
-      <p>The Atari 2600 brought arcade games home and lit the fuse. Pitfall, Adventure, Asteroids — the spark for everything that followed.</p></div></div>
-    <div class="era"><img src="images/smb3.png" alt=""><div><div class="yr">1985</div><h4>The NES saves gaming</h4>
-      <p>After a crash nearly killed the industry, Nintendo rebuilt it — Mario, Zelda &amp; Metroid were all born here.</p></div></div>
-    <div class="era"><img src="images/sonic-2.png" alt=""><div><div class="yr">1991</div><h4>The 16-bit war</h4>
-      <p>SNES vs. Genesis. Mario vs. Sonic. The rivalry that pushed both to greatness — and gave us the classics.</p></div></div>
-    <div class="era"><img src="images/tetris.png" alt=""><div><div class="yr">1989→</div><h4>Gaming goes portable</h4>
-      <p>Game Boy → GBA put real games in your pocket. <b>Tetris</b> became the most-played game in history. (You're holding the heir.)</p></div></div>
-    <div class="era"><img src="images/arcade-metal-slug.png" alt=""><div><div class="yr">1994</div><h4>The arcade's golden age</h4>
-      <p>Where it was loudest and best — fighters, shmups &amp; beat-'em-ups built to swallow your quarters.</p></div></div>
-    <div class="era"><img src="images/mgs.png" alt=""><div><div class="yr">1997</div><h4>Games grow up &amp; go 3D</h4>
-      <p>The PlayStation brought cinematic storytelling and polygons. Gaming became a mainstream art form.</p></div></div>
+  <div class="genre"><div class="genre-head"><h3>⚡ Marvel &amp; Heroes</h3><p>Long before the movies — this is how you <i>became</i> the heroes.</p></div>
+    <div class="grid3">
+      <div class="card"><div class="art"><img src="images/arcade-xmen.png" alt=""></div><div class="meta"><div class="name">X-Men</div><div class="sys">Arcade</div><div class="blurb">The legendary 6-player cabinet.</div></div></div>
+      <div class="card"><div class="art"><img src="images/spiderman-ps1.png" alt=""></div><div class="meta"><div class="name">Spider-Man</div><div class="sys">PlayStation</div><div class="blurb">Nailed what it feels like to be Spidey.</div></div></div>
+      <div class="card"><div class="art"><img src="images/arcade-mvc.png" alt=""></div><div class="meta"><div class="name">Marvel vs. Capcom</div><div class="sys">Arcade</div><div class="blurb">Wolverine vs. Mega Man. Glorious.</div></div></div>
+    </div>
+    <p class="also"><b>Also on board:</b> Spider-Man: Maximum Carnage · X-Men: Mutant Apocalypse &amp; Clone Wars · Marvel Super Heroes: War of the Gems · The Punisher · Alien vs. Predator · X-Men vs. Street Fighter · Ultimate Spider-Man.</p>
+  </div>
+
+  <div class="genre"><div class="genre-head"><h3>🏰 The Disney Vault</h3><p>The '90s were a golden age — all-time platformers made out of cartoons.</p></div>
+    <div class="grid3">
+      <div class="card"><div class="art"><img src="images/ducktales.png" alt=""></div><div class="meta"><div class="name">DuckTales</div><div class="sys">NES</div><div class="blurb">That pogo-cane. That Moon theme.</div></div></div>
+      <div class="card"><div class="art"><img src="images/aladdin.png" alt=""></div><div class="meta"><div class="name">Aladdin</div><div class="sys">Genesis</div><div class="blurb">Animated by actual Disney artists.</div></div></div>
+      <div class="card"><div class="art"><img src="images/castle-of-illusion.png" alt=""></div><div class="meta"><div class="name">Castle of Illusion</div><div class="sys">Genesis</div><div class="blurb">Mickey at his platforming peak.</div></div></div>
+    </div>
+    <p class="also"><b>Also on board:</b> Darkwing Duck · DuckTales 2 · Mickey Mania · Magical Quest starring Mickey · Goof Troop (co-op!) · Toy Story 2.</p>
+  </div>
+
+  <div class="genre"><div class="genre-head"><h3>🍩 Springfield</h3><p>The Simpsons hit games early &amp; often — including an arcade legend.</p></div>
+    <div class="grid3">
+      <div class="card"><div class="art"><img src="images/arcade-simpsons.png" alt=""></div><div class="meta"><div class="name">The Simpsons Arcade</div><div class="sys">Arcade</div><div class="blurb">Play the whole family. 4-player classic.</div></div></div>
+      <div class="card"><div class="art"><img src="images/simpsons-barts-nightmare.png" alt=""></div><div class="meta"><div class="name">Bart's Nightmare</div><div class="sys">SNES</div><div class="blurb">A fever-dream of mini-games.</div></div></div>
+      <div class="card"><div class="art"><img src="images/simpsons-space-mutants.png" alt=""></div><div class="meta"><div class="name">Bart vs. the Space Mutants</div><div class="sys">Genesis</div><div class="blurb">Only Bart can see the aliens.</div></div></div>
+    </div>
   </div>
 </div></section>
 
-<!-- ACTION & ADVENTURE -->
-<section id="adventure"><div class="wrap">
-  <div class="eyebrow">🗡️ EXPLORE EVERYTHING</div>
-  <h2>Action &amp; <span class="em">Adventure</span></h2>
-  <p class="lead">Big worlds, secret rooms, and that "just one more area" feeling.</p>
-  <div class="grid">
-    <div class="card first"><div class="art"><img src="images/super-metroid.png" alt=""></div><div class="meta"><div class="name">Super Metroid</div><div class="sys">SNES</div><div class="blurb">The genre-definer. Get lost on planet Zebes.</div></div></div>
-    <div class="card"><div class="art"><img src="images/sotn.png" alt=""></div><div class="meta"><div class="name">Castlevania: Symphony of the Night</div><div class="sys">PlayStation</div><div class="blurb">The other half of "Metroidvania." A gothic masterpiece.</div></div></div>
-    <div class="card"><div class="art"><img src="images/minish-cap.png" alt=""></div><div class="meta"><div class="name">Zelda: The Minish Cap</div><div class="sys">GBA</div><div class="blurb">Shrink to ant-size and explore a world within the world.</div></div></div>
-    <div class="card"><div class="art"><img src="images/adv-aria.png" alt=""></div><div class="meta"><div class="name">Castlevania: Aria of Sorrow</div><div class="sys">GBA</div><div class="blurb">Steal monsters' souls for powers. The best handheld Castlevania.</div></div></div>
-    <div class="card"><div class="art"><img src="images/adv-fusion.png" alt=""></div><div class="meta"><div class="name">Metroid Fusion</div><div class="sys">GBA</div><div class="blurb">Tense, fast, and genuinely a little scary.</div></div></div>
-    <div class="card"><div class="art"><img src="images/adv-tenchu.png" alt=""></div><div class="meta"><div class="name">Tenchu 2</div><div class="sys">PlayStation</div><div class="blurb">Be a ninja. Stay in the shadows. Stealth before stealth was cool.</div></div></div>
-    <div class="card"><div class="art"><img src="images/adv-vagrant.png" alt=""></div><div class="meta"><div class="name">Vagrant Story</div><div class="sys">PlayStation</div><div class="blurb">A cult-classic dungeon crawl with jaw-dropping presentation.</div></div></div>
-    <div class="card"><div class="art"><img src="images/metroid-zero-mission.png" alt=""></div><div class="meta"><div class="name">Metroid: Zero Mission</div><div class="sys">GBA</div><div class="blurb">The original Metroid, remade slick and modern.</div></div></div>
-  </div>
-</div></section>
-
-<!-- PLATFORMERS -->
-<section id="platformers"><div class="wrap">
-  <div class="eyebrow">🍄 RUN, JUMP, REPEAT</div>
-  <h2>Platforming <span class="em">Greats</span></h2>
-  <p class="lead">The genre that built gaming — precision, secrets, and the perfect jump.</p>
-  <div class="grid">
-    <div class="card first"><div class="art"><img src="images/plat-mmx.png" alt=""></div><div class="meta"><div class="name">Mega Man X</div><div class="sys">SNES</div><div class="blurb">The cooler, faster reinvention of Mega Man. A flawless action-platformer.</div></div></div>
-    <div class="card"><div class="art"><img src="images/yoshis-island.png" alt=""></div><div class="meta"><div class="name">Yoshi's Island</div><div class="sys">SNES</div><div class="blurb">Hand-drawn and endlessly inventive. Unlike anything before it.</div></div></div>
-    <div class="card"><div class="art"><img src="images/plat-kss.png" alt=""></div><div class="meta"><div class="name">Kirby Super Star</div><div class="sys">SNES</div><div class="blurb">Eight games in one, plus drop-in co-op. Pure joy.</div></div></div>
-    <div class="card"><div class="art"><img src="images/plat-ewj.png" alt=""></div><div class="meta"><div class="name">Earthworm Jim</div><div class="sys">SNES</div><div class="blurb">Cartoon chaos with some of the best animation of its era.</div></div></div>
-    <div class="card"><div class="art"><img src="images/plat-warioland4.png" alt=""></div><div class="meta"><div class="name">Wario Land 4</div><div class="sys">GBA</div><div class="blurb">Weird, dense and brilliant — Wario at his peak.</div></div></div>
-    <div class="card"><div class="art"><img src="images/mario-luigi.png" alt=""></div><div class="meta"><div class="name">Mario &amp; Luigi: Superstar Saga</div><div class="sys">GBA</div><div class="blurb">A hilarious RPG-platformer hybrid. The bros at their funniest.</div></div></div>
-  </div>
-</div></section>
-
-<!-- RUN & GUN -->
-<section id="rungun"><div class="wrap">
-  <div class="eyebrow">💥 GUNS BLAZING</div>
-  <h2>Run &amp; <span class="em">Gun</span></h2>
-  <p class="lead">Pure adrenaline — dodge everything, shoot everything, never stop moving.</p>
-  <div class="grid">
-    <div class="card first"><div class="art"><img src="images/rg-contra3.png" alt=""></div><div class="meta"><div class="name">Contra III: The Alien Wars</div><div class="sys">SNES</div><div class="blurb">The genre's high-water mark. Brutal and brilliant — bring a friend.</div></div></div>
-    <div class="card"><div class="art"><img src="images/rg-hardcorps.png" alt=""></div><div class="meta"><div class="name">Contra: Hard Corps</div><div class="sys">Genesis</div><div class="blurb">Faster, harder, with branching paths. A cult legend.</div></div></div>
-    <div class="card"><div class="art"><img src="images/rg-mslugx.png" alt=""></div><div class="meta"><div class="name">Metal Slug X</div><div class="sys">PlayStation</div><div class="blurb">Jaw-dropping 2D animation. Run, gun, and laugh.</div></div></div>
-    <div class="card"><div class="art"><img src="images/gunstar-heroes.png" alt=""></div><div class="meta"><div class="name">Gunstar Heroes</div><div class="sys">Genesis</div><div class="blurb">Treasure's dazzling, frantic masterpiece.</div></div></div>
-    <div class="card"><div class="art"><img src="images/rg-xeno.png" alt=""></div><div class="meta"><div class="name">Xeno Crisis</div><div class="sys">Genesis</div><div class="blurb">A new game made <i>today</i> for the Genesis. Twin-stick chaos.</div><span class="tag">MODERN</span></div></div>
-  </div>
-</div></section>
-
-<!-- BRAWLERS -->
-<section id="brawlers"><div class="wrap">
-  <div class="eyebrow">👊 GRAB A FRIEND</div>
-  <h2>Beat-'em-Up <span class="em">Brawlers</span></h2>
-  <p class="lead">Walk right. Punch everything. The arcade staple — best with two players.</p>
-  <div class="grid">
-    <div class="card first"><div class="art"><img src="images/streets-of-rage-2.png" alt=""></div><div class="meta"><div class="name">Streets of Rage 2</div><div class="sys">Genesis</div><div class="blurb">The gold standard. Untouchable soundtrack.</div></div></div>
-    <div class="card"><div class="art"><img src="images/tmnt-turtles-in-time.png" alt=""></div><div class="meta"><div class="name">TMNT IV: Turtles in Time</div><div class="sys">SNES</div><div class="blurb">Cowabunga. The peak turtle brawler.</div></div></div>
-    <div class="card"><div class="art"><img src="images/arcade-simpsons.png" alt=""></div><div class="meta"><div class="name">The Simpsons</div><div class="sys">Arcade</div><div class="blurb">A beloved 4-player cabinet. Play as the whole family.</div></div></div>
-    <div class="card"><div class="art"><img src="images/brawl-finalfight.png" alt=""></div><div class="meta"><div class="name">Final Fight</div><div class="sys">Arcade</div><div class="blurb">The one that defined the genre. Clean up Metro City.</div></div></div>
-    <div class="card"><div class="art"><img src="images/brawl-goldenaxe.png" alt=""></div><div class="meta"><div class="name">Golden Axe</div><div class="sys">Genesis</div><div class="blurb">Fantasy hack-'n-slash. Ride the dragons.</div></div></div>
-    <div class="card"><div class="art"><img src="images/brawl-captcomm.png" alt=""></div><div class="meta"><div class="name">Captain Commando</div><div class="sys">Arcade</div><div class="blurb">Capcom at its most gleefully ridiculous.</div></div></div>
-    <div class="card"><div class="art"><img src="images/brawl-sunset.png" alt=""></div><div class="meta"><div class="name">Sunset Riders</div><div class="sys">SNES</div><div class="blurb">A wild-west run-and-gun co-op classic.</div></div></div>
-    <div class="card"><div class="art"><img src="images/comix-zone.png" alt=""></div><div class="meta"><div class="name">Comix Zone</div><div class="sys">Genesis</div><div class="blurb">You fight <i>inside</i> a comic book. One of a kind.</div></div></div>
-  </div>
-</div></section>
-
-<!-- FIGHTERS -->
-<section id="fighters"><div class="wrap">
-  <div class="eyebrow">🥋 ROUND ONE — FIGHT</div>
-  <h2>Versus <span class="em">Fighters</span></h2>
-  <p class="lead">The genre the arcades were built on. Learn a combo, ruin a friendship.</p>
-  <div class="grid">
-    <div class="card first"><div class="art"><img src="images/super-street-fighter-2.png" alt=""></div><div class="meta"><div class="name">Super Street Fighter II</div><div class="sys">SNES</div><div class="blurb">Invented the modern fighting game. Hadouken.</div></div></div>
-    <div class="card"><div class="art"><img src="images/fgt-mk2.png" alt=""></div><div class="meta"><div class="name">Mortal Kombat II</div><div class="sys">SNES</div><div class="blurb">The one that sparked the controversy — and the Fatalities.</div></div></div>
-    <div class="card"><div class="art"><img src="images/tekken-3.png" alt=""></div><div class="meta"><div class="name">Tekken 3</div><div class="sys">PlayStation</div><div class="blurb">Widely called the best fighter of its era. 3D mastery.</div></div></div>
-    <div class="card"><div class="art"><img src="images/fgt-kof98.png" alt=""></div><div class="meta"><div class="name">The King of Fighters '98</div><div class="sys">Arcade · Neo Geo</div><div class="blurb">SNK's beloved dream-match. A connoisseur's pick.</div></div></div>
-    <div class="card"><div class="art"><img src="images/fgt-samsho.png" alt=""></div><div class="meta"><div class="name">Samurai Shodown II</div><div class="sys">Arcade · Neo Geo</div><div class="blurb">Weapon-based dueling at its tense, stylish best.</div></div></div>
-  </div>
-</div></section>
-
-<!-- RACING -->
-<section id="racing"><div class="wrap">
-  <div class="eyebrow">🏎️ FOOT TO THE FLOOR</div>
-  <h2>Racing &amp; <span class="em">Speed</span></h2>
-  <p class="lead">Karts, F-zero machines, skateboards and supercars.</p>
-  <div class="grid">
-    <div class="card first"><div class="art"><img src="images/super-mario-kart.png" alt=""></div><div class="meta"><div class="name">Super Mario Kart</div><div class="sys">SNES</div><div class="blurb">Invented the kart-racing genre. Blame it for blue shells.</div></div></div>
-    <div class="card first"><div class="art"><img src="images/race-fzero.png" alt=""></div><div class="meta"><div class="name">F-Zero</div><div class="sys">SNES</div><div class="blurb">Blistering future-racing that showed off real SNES tech.</div></div></div>
-    <div class="card"><div class="art"><img src="images/ctr.png" alt=""></div><div class="meta"><div class="name">Crash Team Racing</div><div class="sys">PlayStation</div><div class="blurb">The kart racer that actually rivals Mario.</div></div></div>
-    <div class="card"><div class="art"><img src="images/race-gt.png" alt=""></div><div class="meta"><div class="name">Gran Turismo</div><div class="sys">PlayStation</div><div class="blurb">"The real driving simulator." It changed racing games forever.</div></div></div>
-    <div class="card"><div class="art"><img src="images/thps2.png" alt=""></div><div class="meta"><div class="name">Tony Hawk's Pro Skater 2</div><div class="sys">PlayStation</div><div class="blurb">Maybe the most replayable game ever. One more run.</div></div></div>
-    <div class="card"><div class="art"><img src="images/race-rocknroll.png" alt=""></div><div class="meta"><div class="name">Rock N' Roll Racing</div><div class="sys">SNES</div><div class="blurb">Combat racing with a licensed metal soundtrack. By Blizzard!</div></div></div>
-    <div class="card"><div class="art"><img src="images/race-roadrash.png" alt=""></div><div class="meta"><div class="name">Road Rash 3</div><div class="sys">Genesis</div><div class="blurb">Motorcycle racing where you punch your rivals.</div></div></div>
-    <div class="card"><div class="art"><img src="images/race-mksc.png" alt=""></div><div class="meta"><div class="name">Mario Kart: Super Circuit</div><div class="sys">GBA</div><div class="blurb">Mario Kart in your pocket — with every SNES track too.</div></div></div>
-  </div>
-</div></section>
-
-<!-- SPORTS -->
-<section id="sports"><div class="wrap">
-  <div class="eyebrow">🏆 GAME DAY</div>
-  <h2>Sports <span class="em">&amp; the Outdoors</span></h2>
-  <p class="lead">From the rink to the ring to the lake — pick-up-and-play classics.</p>
-  <div class="grid">
-    <div class="card first"><div class="art"><img src="images/hack-nhl94.png" alt=""></div><div class="meta"><div class="name">NHL '94 (2025 rosters)</div><div class="sys">Genesis · hack</div><div class="blurb">The hockey game by which all others are judged — now with modern teams.</div><span class="tag hack">UPDATED</span></div></div>
-    <div class="card first"><div class="art"><img src="images/sport-tecmo.png" alt=""></div><div class="meta"><div class="name">Tecmo Super Bowl</div><div class="sys">NES</div><div class="blurb">The most legendary football game ever made. Bo Jackson is unstoppable.</div></div></div>
-    <div class="card"><div class="art"><img src="images/sport-nbajam.png" alt=""></div><div class="meta"><div class="name">NBA Jam: Tournament Edition</div><div class="sys">SNES</div><div class="blurb">"He's on fire!" Two-on-two basketball, all dunks, all attitude.</div></div></div>
-    <div class="card"><div class="art"><img src="images/sport-blackbass.png" alt=""></div><div class="meta"><div class="name">Super Black Bass</div><div class="sys">SNES</div><div class="blurb">Gone fishin'. Surprisingly zen — cast, wait, reel 'em in.</div></div></div>
-    <div class="card"><div class="art"><img src="images/sport-punchout.png" alt=""></div><div class="meta"><div class="name">Super Punch-Out!!</div><div class="sys">SNES</div><div class="blurb">Boxing as a rhythm-and-pattern puzzle. Pure joy.</div></div></div>
-    <div class="card"><div class="art"><img src="images/sport-miketyson.png" alt=""></div><div class="meta"><div class="name">Mike Tyson's Punch-Out!!</div><div class="sys">NES</div><div class="blurb">The original. Can you beat Tyson? A rite of passage.</div></div></div>
-    <div class="card"><div class="art"><img src="images/sport-windjammers.png" alt=""></div><div class="meta"><div class="name">Windjammers</div><div class="sys">Arcade</div><div class="blurb">Frisbee... but intense. A cult competitive classic.</div></div></div>
-    <div class="card"><div class="art"><img src="images/sport-mariogolf.png" alt=""></div><div class="meta"><div class="name">Mario Golf &amp; Tennis</div><div class="sys">GBA</div><div class="blurb">Surprisingly deep — these have full RPG modes hidden inside.</div></div></div>
-  </div>
-</div></section>
-
-<!-- STRATEGY -->
-<section id="strategy"><div class="wrap">
-  <div class="eyebrow">♟️ OUTSMART EVERYONE</div>
-  <h2>Strategy &amp; <span class="em">Tactics</span></h2>
-  <p class="lead">For the thinkers — grid-based battles where every move counts.</p>
-  <div class="grid">
-    <div class="card first"><div class="art"><img src="images/strat-fft.png" alt=""></div><div class="meta"><div class="name">Final Fantasy Tactics</div><div class="sys">PlayStation</div><div class="blurb">A tactical-RPG masterpiece with a story to match.</div></div></div>
-    <div class="card"><div class="art"><img src="images/strat-advwars.png" alt=""></div><div class="meta"><div class="name">Advance Wars</div><div class="sys">GBA</div><div class="blurb">Turn-based warfare that's instantly fun and endlessly deep.</div></div></div>
-    <div class="card"><div class="art"><img src="images/strat-fe.png" alt=""></div><div class="meta"><div class="name">Fire Emblem</div><div class="sys">GBA</div><div class="blurb">Strategy-RPG where fallen units stay dead. Every choice matters.</div></div></div>
-    <div class="card"><div class="art"><img src="images/strat-ffta.png" alt=""></div><div class="meta"><div class="name">Final Fantasy Tactics Advance</div><div class="sys">GBA</div><div class="blurb">Hundreds of hours of portable tactical battling.</div></div></div>
-  </div>
-</div></section>
-
-<!-- RPG -->
-<section id="rpgs"><div class="wrap">
-  <div class="eyebrow">⚔️ FOR THE LONG HAUL</div>
-  <h2>RPG <span class="em">Epics</span></h2>
-  <p class="lead">When you want a world to vanish into for 40 hours.</p>
-  <div class="grid">
-    <div class="card"><div class="art"><img src="images/earthbound.png" alt=""></div><div class="meta"><div class="name">EarthBound</div><div class="sys">SNES</div><div class="blurb">A kid with a bat vs. cosmic dread. Funny, weird, secretly profound.</div></div></div>
-    <div class="card"><div class="art"><img src="images/ff9.png" alt=""></div><div class="meta"><div class="name">Final Fantasy IX</div><div class="sys">PlayStation</div><div class="blurb">The fan favorite — a love letter to classic fantasy.</div></div></div>
-    <div class="card"><div class="art"><img src="images/golden-sun.png" alt=""></div><div class="meta"><div class="name">Golden Sun</div><div class="sys">GBA</div><div class="blurb">Flashy elemental magic that pushed the GBA to its limits.</div></div></div>
-    <div class="card"><div class="art"><img src="images/mother-3.png" alt=""></div><div class="meta"><div class="name">Mother 3</div><div class="sys">GBA</div><div class="blurb">Never released in English — fans translated it. Bring tissues.</div><span class="tag hack">FAN TRANSLATION</span></div></div>
-    <div class="card"><div class="art"><img src="images/phantasy-star-4.png" alt=""></div><div class="meta"><div class="name">Phantasy Star IV</div><div class="sys">Genesis</div><div class="blurb">Proof the Genesis could do epic, not just edgy.</div></div></div>
-    <div class="card"><div class="art"><img src="images/mario-rpg.png" alt=""></div><div class="meta"><div class="name">Super Mario RPG</div><div class="sys">SNES</div><div class="blurb">Mario + RPG by the Final Fantasy studio. Pure charm.</div></div></div>
-    <div class="card"><div class="art"><img src="images/rpg-som.png" alt=""></div><div class="meta"><div class="name">Secret of Mana</div><div class="sys">SNES</div><div class="blurb">A gorgeous action-RPG with real-time combat — and 3-player co-op.</div></div></div>
-    <div class="card"><div class="art"><img src="images/rpg-xeno.png" alt=""></div><div class="meta"><div class="name">Xenogears</div><div class="sys">PlayStation</div><div class="blurb">An ambitious, philosophical sci-fi epic. A legendary cult classic.</div></div></div>
-    <div class="card"><div class="art"><img src="images/rpg-chronocross.png" alt=""></div><div class="meta"><div class="name">Chrono Cross</div><div class="sys">PlayStation</div><div class="blurb">The dreamlike follow-up to Chrono Trigger — and that soundtrack.</div></div></div>
-    <div class="card"><div class="art"><img src="images/rpg-suiko2.png" alt=""></div><div class="meta"><div class="name">Suikoden II</div><div class="sys">PlayStation</div><div class="blurb">Recruit 108 heroes in one of the most beloved RPGs ever made.</div></div></div>
-  </div>
-</div></section>
-
-<!-- HORROR -->
-<section id="horror"><div class="wrap">
-  <div class="eyebrow">🩸 DON'T LOOK BEHIND YOU</div>
-  <h2>Survival <span class="em">Horror</span></h2>
-  <p class="lead">The PlayStation made gaming genuinely scary. Lights low, volume up — good luck.</p>
-  <div class="grid">
-    <div class="card first"><div class="art"><img src="images/horror-sh.png" alt=""></div><div class="meta"><div class="name">Silent Hill</div><div class="sys">PlayStation</div><div class="blurb">Psychological dread that still outclasses most modern horror.</div></div></div>
-    <div class="card"><div class="art"><img src="images/re2.png" alt=""></div><div class="meta"><div class="name">Resident Evil 2</div><div class="sys">PlayStation</div><div class="blurb">The one that perfected the formula. Welcome to Raccoon City.</div></div></div>
-    <div class="card"><div class="art"><img src="images/horror-re1.png" alt=""></div><div class="meta"><div class="name">Resident Evil</div><div class="sys">PlayStation</div><div class="blurb">The original that coined the term "survival horror."</div></div></div>
-    <div class="card"><div class="art"><img src="images/horror-dino.png" alt=""></div><div class="meta"><div class="name">Dino Crisis</div><div class="sys">PlayStation</div><div class="blurb">Resident Evil… but with raptors. From the same creators.</div></div></div>
-  </div>
-</div></section>
-
-<!-- MARVEL -->
-<section id="marvel"><div class="wrap">
-  <div class="eyebrow">⚡ HEROES ASSEMBLE</div>
-  <h2>Comic-Book <span class="em">Brawlers</span></h2>
-  <p class="lead">Long before the movies, this is how you <i>became</i> the heroes.</p>
-  <div class="grid">
-    <div class="card"><div class="art"><img src="images/arcade-xmen.png" alt=""></div><div class="meta"><div class="name">X-Men</div><div class="sys">Arcade</div><div class="blurb">The legendary 6-player cabinet. "Welcome to die!"</div></div></div>
-    <div class="card"><div class="art"><img src="images/maximum-carnage.png" alt=""></div><div class="meta"><div class="name">Spider-Man: Maximum Carnage</div><div class="sys">SNES</div><div class="blurb">Spidey &amp; Venom team up — straight from the comic arc.</div></div></div>
-    <div class="card"><div class="art"><img src="images/arcade-mvc.png" alt=""></div><div class="meta"><div class="name">Marvel vs. Capcom</div><div class="sys">Arcade</div><div class="blurb">Wolverine vs. Mega Man. Gloriously over-the-top.</div></div></div>
-    <div class="card"><div class="art"><img src="images/xmen-mutant-apocalypse.png" alt=""></div><div class="meta"><div class="name">X-Men: Mutant Apocalypse</div><div class="sys">SNES</div><div class="blurb">Every X-Man plays differently. Claws out.</div></div></div>
-    <div class="card"><div class="art"><img src="images/arcade-punisher.png" alt=""></div><div class="meta"><div class="name">The Punisher</div><div class="sys">Arcade</div><div class="blurb">Capcom's gritty, underrated brawler.</div></div></div>
-    <div class="card"><div class="art"><img src="images/arcade-avp.png" alt=""></div><div class="meta"><div class="name">Alien vs. Predator</div><div class="sys">Arcade</div><div class="blurb">A cult-favorite many call the best beat-'em-up ever.</div></div></div>
-    <div class="card"><div class="art"><img src="images/marvel-war-of-gems.png" alt=""></div><div class="meta"><div class="name">Marvel Super Heroes: War of the Gems</div><div class="sys">SNES</div><div class="blurb">The Avengers chase the Infinity Gems — in 1996.</div></div></div>
-    <div class="card"><div class="art"><img src="images/spiderman-ps1.png" alt=""></div><div class="meta"><div class="name">Spider-Man</div><div class="sys">PlayStation</div><div class="blurb">The one that nailed what it feels like to be Spidey.</div></div></div>
-  </div>
-</div></section>
-
-<!-- DISNEY -->
-<section id="disney"><div class="wrap">
-  <div class="eyebrow">🏰 OPEN THE VAULT</div>
-  <h2>The <span class="em">Disney</span> Classics</h2>
-  <p class="lead">The '90s were a golden age — Capcom &amp; Sega made all-time platformers out of cartoons.</p>
-  <div class="grid">
-    <div class="card"><div class="art"><img src="images/ducktales.png" alt=""></div><div class="meta"><div class="name">DuckTales</div><div class="sys">NES</div><div class="blurb">Scrooge's pogo-cane bounce is iconic. The Moon theme is law.</div></div></div>
-    <div class="card"><div class="art"><img src="images/aladdin.png" alt=""></div><div class="meta"><div class="name">Aladdin</div><div class="sys">Genesis</div><div class="blurb">Hand-animated by actual Disney artists. Still gorgeous.</div></div></div>
-    <div class="card"><div class="art"><img src="images/castle-of-illusion.png" alt=""></div><div class="meta"><div class="name">Castle of Illusion</div><div class="sys">Genesis</div><div class="blurb">Mickey at his platforming peak. Charming and perfect.</div></div></div>
-    <div class="card"><div class="art"><img src="images/darkwing-duck.png" alt=""></div><div class="meta"><div class="name">Darkwing Duck</div><div class="sys">NES</div><div class="blurb">Let's get dangerous. It's basically Mega Man as a duck.</div></div></div>
-  </div>
-</div></section>
-
-<!-- SIMPSONS -->
-<section id="simpsons"><div class="wrap">
-  <div class="eyebrow">🍩 D'OH!</div>
-  <h2>Springfield <span class="em">Calling</span></h2>
-  <p class="lead">The Simpsons hit games early — including one beloved arcade legend.</p>
-  <div class="grid">
-    <div class="card"><div class="art"><img src="images/arcade-simpsons.png" alt=""></div><div class="meta"><div class="name">The Simpsons Arcade</div><div class="sys">Arcade</div><div class="blurb">Play Homer, Marge, Bart or Lisa. A genuine 4-player classic.</div></div></div>
-    <div class="card"><div class="art"><img src="images/simpsons-barts-nightmare.png" alt=""></div><div class="meta"><div class="name">Bart's Nightmare</div><div class="sys">SNES</div><div class="blurb">Bart's homework as a fever-dream of mini-games. Wonderfully weird.</div></div></div>
-    <div class="card"><div class="art"><img src="images/simpsons-space-mutants.png" alt=""></div><div class="meta"><div class="name">Bart vs. the Space Mutants</div><div class="sys">Genesis</div><div class="blurb">Only Bart can see the aliens. Tricky and charming.</div></div></div>
-  </div>
-</div></section>
-
-<!-- ROM HACKS -->
+<!-- ROM HACKS (the exception — full coverage) -->
 <section id="hacks"><div class="wrap banner">
   <div class="eyebrow" style="color:var(--pink)">🧪 THE SECRET MENU</div>
   <h2>ROM <span class="em">Hacks</span></h2>
-  <p class="lead">The part that makes this collection special. <b>ROM hacks</b> are games fans rebuilt by
-  hand — colorizing old classics, fixing decades-old flaws, or building whole new adventures inside
-  beloved engines. You can't buy these anywhere. They're the crown jewels.</p>
+  <p class="lead">Here's what makes this collection truly special — and you won't find it on any store shelf.
+  <b>ROM hacks</b> are games that fans rebuilt by hand: colorizing old black-and-white classics, fixing
+  decades-old flaws, translating Japan-only gems, or building whole new adventures inside beloved engines.
+  Each one is a labor of love. These are the crown jewels — explore them.</p>
+
   <div class="subhead">🌍 New Worlds <small>original fan-made games — not remakes</small></div>
   <div class="grid">
     <div class="card"><div class="art"><img src="images/hack-unbound.png" alt=""></div><div class="meta"><div class="name">Pokémon Unbound</div><div class="sys">GBA</div><div class="blurb">A full-length original adventure so polished it rivals official games.</div><span class="tag hack">MUST-PLAY</span></div></div>
@@ -442,14 +342,14 @@
     <div class="card"><div class="art"><img src="images/hack-emerald-rogue.png" alt=""></div><div class="meta"><div class="name">Pokémon Emerald Rogue</div><div class="sys">GBA</div><div class="blurb">Pokémon meets roguelike runs. Endlessly replayable.</div><span class="tag hack">NEW SPIN</span></div></div>
     <div class="card"><div class="art"><img src="images/hack-super-metroid-ascent.png" alt=""></div><div class="meta"><div class="name">Super Metroid: Ascent</div><div class="sys">SNES</div><div class="blurb">A brand-new quest built on the legendary engine.</div><span class="tag hack">NEW WORLD</span></div></div>
     <div class="card"><div class="art"><img src="images/hack-rogue-dawn.png" alt=""></div><div class="meta"><div class="name">Metroid: Rogue Dawn</div><div class="sys">NES</div><div class="blurb">An all-new Metroid prequel — squeezed onto the NES. Astonishing.</div><span class="tag hack">PREQUEL</span></div></div>
-    <div class="card"><div class="art"><img src="images/hack-parallel-worlds.png" alt=""></div><div class="meta"><div class="name">Zelda: Parallel Worlds</div><div class="sys">SNES</div><div class="blurb">An all-new, famously punishing Zelda quest. For experts only.</div><span class="tag hack">BRUTAL</span></div></div>
+    <div class="card"><div class="art"><img src="images/hack-parallel-worlds.png" alt=""></div><div class="meta"><div class="name">Zelda: Parallel Worlds</div><div class="sys">SNES</div><div class="blurb">An all-new, famously punishing Zelda quest. Experts only.</div><span class="tag hack">BRUTAL</span></div></div>
   </div>
 
   <div class="subhead">⭐ Definitive Cuts <small>the single best version of a classic</small></div>
   <div class="grid">
     <div class="card"><div class="art"><img src="images/sonic-3-complete.png" alt=""></div><div class="meta"><div class="name">Sonic 3 Complete</div><div class="sys">Genesis</div><div class="blurb">Sonic 3 &amp; Knuckles merged into one, every rough edge sanded off.</div><span class="tag hack">DEFINITIVE</span></div></div>
     <div class="card"><div class="art"><img src="images/hack-ff6-bnw.png" alt=""></div><div class="meta"><div class="name">FF6: Brave New World</div><div class="sys">SNES</div><div class="blurb">A deeper, rebalanced take on a top-five RPG of all time.</div><span class="tag hack">REIMAGINED</span></div></div>
-    <div class="card"><div class="art"><img src="images/hack-polished-crystal.png" alt=""></div><div class="meta"><div class="name">Pokémon Polished Crystal</div><div class="sys">GBC</div><div class="blurb">Pokémon Crystal modernized — new features, fixes, more 'mons.</div><span class="tag hack">ENHANCED</span></div></div>
+    <div class="card"><div class="art"><img src="images/hack-polished-crystal.png" alt=""></div><div class="meta"><div class="name">Pokémon Polished Crystal</div><div class="sys">GBC</div><div class="blurb">Crystal modernized — new features, fixes, more 'mons.</div><span class="tag hack">ENHANCED</span></div></div>
     <div class="card"><div class="art"><img src="images/hack-nhl94.png" alt=""></div><div class="meta"><div class="name">NHL '94: 2025 Edition</div><div class="sys">Genesis</div><div class="blurb">The legendary hockey game with today's rosters. Still has the fights.</div><span class="tag hack">UPDATED</span></div></div>
   </div>
 
@@ -458,15 +358,15 @@
     <div class="card"><div class="art"><img src="images/links-awakening-redux.png" alt=""></div><div class="meta"><div class="name">Link's Awakening DX Redux</div><div class="sys">GBC</div><div class="blurb">The dream-island masterpiece, polished &amp; quietly improved.</div><span class="tag hack">ENHANCED</span></div></div>
     <div class="card"><div class="art"><img src="images/metroid-2-color.png" alt=""></div><div class="meta"><div class="name">Metroid II — in Color</div><div class="sys">Game Boy</div><div class="blurb">Samus's grayscale hunt, hand-painted into full color.</div><span class="tag hack">COLORIZED</span></div></div>
     <div class="card"><div class="art"><img src="images/hack-sml-dx.png" alt=""></div><div class="meta"><div class="name">Super Mario Land DX</div><div class="sys">Game Boy</div><div class="blurb">Mario's first portable outing, now in color.</div><span class="tag hack">COLORIZED</span></div></div>
-    <div class="card"><div class="art"><img src="images/hack-sml2-dx.png" alt=""></div><div class="meta"><div class="name">Super Mario Land 2 DX</div><div class="sys">Game Boy</div><div class="blurb">Six Golden Coins — where Wario debuted — colorized.</div><span class="tag hack">COLORIZED</span></div></div>
+    <div class="card"><div class="art"><img src="images/hack-sml2-dx.png" alt=""></div><div class="meta"><div class="name">Super Mario Land 2 DX</div><div class="sys">Game Boy</div><div class="blurb">Where Wario debuted — colorized.</div><span class="tag hack">COLORIZED</span></div></div>
     <div class="card"><div class="art"><img src="images/hack-wario-dx.png" alt=""></div><div class="meta"><div class="name">Wario Land DX</div><div class="sys">Game Boy</div><div class="blurb">Wario's own debut, brought to color.</div><span class="tag hack">COLORIZED</span></div></div>
     <div class="card"><div class="art"><img src="images/hack-kirby-dx.png" alt=""></div><div class="meta"><div class="name">Kirby's Dream Land DX</div><div class="sys">Game Boy</div><div class="blurb">Kirby's very first adventure, in color.</div><span class="tag hack">COLORIZED</span></div></div>
     <div class="card"><div class="art"><img src="images/hack-kirby2-dx.png" alt=""></div><div class="meta"><div class="name">Kirby's Dream Land 2 DX</div><div class="sys">Game Boy</div><div class="blurb">The sequel, colorized to match.</div><span class="tag hack">COLORIZED</span></div></div>
   </div>
 
-  <div class="subhead">🌐 Lost in Translation <small>never officially released in English — fans did it</small></div>
+  <div class="subhead">🌐 Lost in Translation <small>never released in English — fans did it</small></div>
   <div class="grid">
-    <div class="card"><div class="art"><img src="images/hack-mother3.png" alt=""></div><div class="meta"><div class="name">MOTHER 3</div><div class="sys">GBA</div><div class="blurb">The sequel to EarthBound, never localized. A fan team translated it. Bring tissues.</div><span class="tag hack">FAN TRANSLATION</span></div></div>
+    <div class="card"><div class="art"><img src="images/hack-mother3.png" alt=""></div><div class="meta"><div class="name">MOTHER 3</div><div class="sys">GBA</div><div class="blurb">The sequel to EarthBound, never localized. Fans translated it. Bring tissues.</div><span class="tag hack">FAN TRANSLATION</span></div></div>
     <div class="card"><div class="art"><img src="images/hack-trials.png" alt=""></div><div class="meta"><div class="name">Trials of Mana</div><div class="sys">SNES</div><div class="blurb">Japan-only for decades until fans translated this gorgeous action-RPG.</div><span class="tag hack">FAN TRANSLATION</span></div></div>
   </div>
 </div></section>
@@ -475,16 +375,17 @@
 <section id="ports"><div class="wrap">
   <div class="eyebrow">🖥️ PC LEGENDS, IN YOUR HAND</div>
   <h2>The <span class="em">Ports</span></h2>
-  <p class="lead">Games too big for old cartridges — the PC classics that invented entire genres, rebuilt to run right here.</p>
+  <p class="lead">Some games were too big for old cartridges — so the community rebuilt them to run right here.
+  These are the PC classics that <i>invented entire genres</i>. The fact that they fit in your pocket is a small miracle.</p>
   <div class="grid">
-    <div class="card first"><div class="art"><img src="images/port-doom.png" alt=""></div><div class="meta"><div class="name">DOOM</div><div class="sys">Port · 1993</div><div class="blurb">The granddaddy of the first-person shooter. Still terrifyingly good.</div></div></div>
-    <div class="card first"><div class="art"><img src="images/port-quake.png" alt=""></div><div class="meta"><div class="name">Quake</div><div class="sys">Port · 1996</div><div class="blurb">Pioneered true 3D worlds and online deathmatch.</div></div></div>
-    <div class="card first"><div class="art"><img src="images/port-sm64.png" alt=""></div><div class="meta"><div class="name">Super Mario 64</div><div class="sys">Port</div><div class="blurb">It wrote the rulebook for 3D gaming. Every 3D game owes it.</div></div></div>
-    <div class="card"><div class="art"><img src="images/port-duke.png" alt=""></div><div class="meta"><div class="name">Duke Nukem 3D</div><div class="sys">Port · 1996</div><div class="blurb">Loud, funny, and a landmark shooter. "Hail to the king."</div></div></div>
+    <div class="card"><div class="art"><img src="images/port-doom.png" alt=""></div><div class="meta"><div class="name">DOOM</div><div class="sys">Port · 1993</div><div class="blurb">The granddaddy of the first-person shooter. Still terrifyingly good.</div></div></div>
+    <div class="card"><div class="art"><img src="images/port-quake.png" alt=""></div><div class="meta"><div class="name">Quake</div><div class="sys">Port · 1996</div><div class="blurb">Pioneered true 3D worlds and online deathmatch.</div></div></div>
+    <div class="card"><div class="art"><img src="images/port-sm64.png" alt=""></div><div class="meta"><div class="name">Super Mario 64</div><div class="sys">Port</div><div class="blurb">It wrote the rulebook for 3D gaming. Every 3D game owes it.</div></div></div>
+    <div class="card"><div class="art"><img src="images/port-duke.png" alt=""></div><div class="meta"><div class="name">Duke Nukem 3D</div><div class="sys">Port · 1996</div><div class="blurb">Loud, funny, landmark. "Hail to the king."</div></div></div>
     <div class="card"><div class="art"><img src="images/port-wolf.png" alt=""></div><div class="meta"><div class="name">Wolfenstein 3D</div><div class="sys">Port · 1992</div><div class="blurb">The game that <i>started</i> the FPS. Ground zero.</div></div></div>
     <div class="card"><div class="art"><img src="images/port-cavestory.png" alt=""></div><div class="meta"><div class="name">Cave Story</div><div class="sys">Port · indie</div><div class="blurb">One person made this masterpiece. It launched the indie era.</div></div></div>
-    <div class="card"><div class="art"><img src="images/port-diablo.png" alt=""></div><div class="meta"><div class="name">Diablo</div><div class="sys">Port · 1996</div><div class="blurb">The dungeon crawl that hooked the world. Just one more level.</div></div></div>
-    <div class="card"><div class="art"><img src="images/port-blood.png" alt=""></div><div class="meta"><div class="name">Blood</div><div class="sys">Port · 1997</div><div class="blurb">A cult-classic horror shooter, dripping with style.</div></div></div>
+    <div class="card"><div class="art"><img src="images/port-diablo.png" alt=""></div><div class="meta"><div class="name">Diablo</div><div class="sys">Port · 1996</div><div class="blurb">The dungeon crawl that hooked the world.</div></div></div>
+    <div class="card"><div class="art"><img src="images/port-blood.png" alt=""></div><div class="meta"><div class="name">Blood</div><div class="sys">Port · 1997</div><div class="blurb">A cult-classic horror shooter dripping with style.</div></div></div>
   </div>
 </div></section>
 
@@ -492,23 +393,37 @@
 <section id="scummvm"><div class="wrap">
   <div class="eyebrow">🖱️ POINT, CLICK, LAUGH</div>
   <h2>Adventure <span class="em">Games</span></h2>
-  <p class="lead">No reflexes required — just jokes, puzzles, and some of the funniest writing in games.
-  These LucasArts classics basically <i>invented</i> the genre.</p>
+  <p class="lead">No reflexes required — just jokes, puzzles, and some of the sharpest writing in all of gaming.
+  These LucasArts classics basically <i>invented</i> the genre, and they hold up perfectly.</p>
   <div class="grid">
-    <div class="card"><div class="art"><img src="images/scumm-dott.png" alt=""></div><div class="meta"><div class="name">Day of the Tentacle</div><div class="sys">ScummVM · 1993</div><div class="blurb">A time-travel comedy classic. Endlessly quotable.</div></div></div>
-    <div class="card"><div class="art"><img src="images/scumm-monkey2.png" alt=""></div><div class="meta"><div class="name">Monkey Island 2</div><div class="sys">ScummVM · 1991</div><div class="blurb">Pirates, puzzles, and the sharpest jokes in gaming.</div></div></div>
-    <div class="card"><div class="art"><img src="images/scumm-fullthrottle.png" alt=""></div><div class="meta"><div class="name">Full Throttle</div><div class="sys">ScummVM · 1995</div><div class="blurb">A biker road-movie you play. Effortlessly cool.</div></div></div>
-    <div class="card"><div class="art"><img src="images/scumm-sammax.png" alt=""></div><div class="meta"><div class="name">Sam &amp; Max Hit the Road</div><div class="sys">ScummVM · 1993</div><div class="blurb">A dog and a rabbit-thing solve crimes. Absurd and brilliant.</div></div></div>
-    <div class="card"><div class="art"><img src="images/scumm-indy.png" alt=""></div><div class="meta"><div class="name">Indiana Jones: Fate of Atlantis</div><div class="sys">ScummVM · 1992</div><div class="blurb">Basically the best Indy movie that never was.</div></div></div>
-    <div class="card"><div class="art"><img src="images/scumm-monkey3.png" alt=""></div><div class="meta"><div class="name">The Curse of Monkey Island</div><div class="sys">ScummVM · 1997</div><div class="blurb">Gorgeous hand-drawn cartoon pirate adventure.</div></div></div>
-    <div class="card"><div class="art"><img src="images/scumm-dig.png" alt=""></div><div class="meta"><div class="name">The Dig</div><div class="sys">ScummVM · 1995</div><div class="blurb">A moody sci-fi mystery, co-created by Spielberg.</div></div></div>
+    <div class="card"><div class="art"><img src="images/scumm-dott.png" alt=""></div><div class="meta"><div class="name">Day of the Tentacle</div><div class="sys">1993</div><div class="blurb">A time-travel comedy classic. Endlessly quotable.</div></div></div>
+    <div class="card"><div class="art"><img src="images/scumm-monkey2.png" alt=""></div><div class="meta"><div class="name">Monkey Island 2</div><div class="sys">1991</div><div class="blurb">Pirates, puzzles, and the sharpest jokes in gaming.</div></div></div>
+    <div class="card"><div class="art"><img src="images/scumm-fullthrottle.png" alt=""></div><div class="meta"><div class="name">Full Throttle</div><div class="sys">1995</div><div class="blurb">A biker road-movie you play. Effortlessly cool.</div></div></div>
+    <div class="card"><div class="art"><img src="images/scumm-sammax.png" alt=""></div><div class="meta"><div class="name">Sam &amp; Max Hit the Road</div><div class="sys">1993</div><div class="blurb">A dog and a rabbit-thing solve crimes. Brilliant.</div></div></div>
+    <div class="card"><div class="art"><img src="images/scumm-indy.png" alt=""></div><div class="meta"><div class="name">Indy: Fate of Atlantis</div><div class="sys">1992</div><div class="blurb">The best Indy movie that never was.</div></div></div>
+    <div class="card"><div class="art"><img src="images/scumm-monkey3.png" alt=""></div><div class="meta"><div class="name">Curse of Monkey Island</div><div class="sys">1997</div><div class="blurb">Gorgeous hand-drawn cartoon pirate adventure.</div></div></div>
+    <div class="card"><div class="art"><img src="images/scumm-dig.png" alt=""></div><div class="meta"><div class="name">The Dig</div><div class="sys">1995</div><div class="blurb">A moody sci-fi mystery, co-created by Spielberg.</div></div></div>
+  </div>
+</div></section>
+
+<!-- HISTORY -->
+<section id="history"><div class="wrap">
+  <div class="eyebrow">⏳ HOW WE GOT HERE</div>
+  <h2>A Quick <span class="em">History of Gaming</span></h2>
+  <p class="lead">This little handheld is a time machine — every era of gaming, in your hands. Here's the journey it covers.</p>
+  <div class="eras">
+    <div class="era"><img src="images/era-atari.png" alt=""><div><div class="yr">1977</div><h4>Where it all began</h4><p>The Atari 2600 brought arcade games home and lit the fuse for everything that followed.</p></div></div>
+    <div class="era"><img src="images/smb3.png" alt=""><div><div class="yr">1985</div><h4>The NES saves gaming</h4><p>After a crash nearly killed the industry, Nintendo rebuilt it — Mario, Zelda &amp; Metroid were all born here.</p></div></div>
+    <div class="era"><img src="images/sonic-2.png" alt=""><div><div class="yr">1991</div><h4>The 16-bit war</h4><p>SNES vs. Genesis. Mario vs. Sonic. The rivalry that pushed both to greatness.</p></div></div>
+    <div class="era"><img src="images/tetris.png" alt=""><div><div class="yr">1989→</div><h4>Gaming goes portable</h4><p>Game Boy → GBA put real games in your pocket. You're holding the heir to that whole line.</p></div></div>
+    <div class="era"><img src="images/mgs.png" alt=""><div><div class="yr">1997</div><h4>Games grow up &amp; go 3D</h4><p>The PlayStation brought cinema and polygons. Gaming became a mainstream art form.</p></div></div>
   </div>
 </div></section>
 
 <!-- MOOD -->
 <section id="mood"><div class="wrap">
-  <div class="eyebrow">🎯 PICK BY MOOD</div>
-  <h2>What Are You <span class="em">In The Mood For?</span></h2>
+  <div class="eyebrow">🎯 STILL CAN'T DECIDE?</div>
+  <h2>Pick by <span class="em">Mood</span></h2>
   <div class="chips">
     <div class="chip"><b>Got 10 minutes?</b> Tetris · Pac-Man · Super Punch-Out!! · WarioWare</div>
     <div class="chip"><b>A big adventure?</b> Chrono Trigger · Pokémon Emerald · Final Fantasy IX</div>
@@ -521,9 +436,9 @@
 </div></section>
 
 <footer><div class="wrap">
-  <div class="big">◄ GAME OVER? NEVER ►</div>
-  <p>A curated museum of the best games across generations — hand-picked, tuned, and ready to go.
-  There's no wrong way to play. Find your favorites and have a blast.</p>
+  <div class="big">◄ NOW GO PLAY ►</div>
+  <p>Hundreds of the best games ever made, all in one place, all ready to go. There's no wrong way in —
+  pick a cover that looks cool and press start. Your new favorite game is somewhere on here.</p>
   <p class="muted">A handheld field guide · Box art &amp; shortcut map from the collection / OnionUI</p>
 </div></footer>
 
