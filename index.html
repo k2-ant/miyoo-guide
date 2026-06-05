@@ -91,6 +91,15 @@
   .era .yr{font-family:'Bebas Neue';font-size:24px;color:var(--yellow);line-height:1}
   .era h4{margin:2px 0 4px;font-size:17px;color:#fff}
   .era p{margin:0;color:var(--muted);font-size:13.5px}
+  .era2{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:13px 0}
+  .era2 .hd{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .era2 .yr{font-family:'Bebas Neue';font-size:25px;color:var(--yellow);line-height:1}
+  .era2 h4{margin:0;font-size:18px;color:#fff}
+  .era2 p{margin:5px 0 13px;color:var(--muted);font-size:13.5px}
+  .era2 .strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:9px}
+  .era2 .t{background:#070213;border:1px solid var(--line);border-radius:8px;padding:6px}
+  .era2 .t img{width:100%;aspect-ratio:1;object-fit:contain}
+  .era2 .t span{display:block;font-size:9px;color:var(--muted);margin-top:4px;line-height:1.15;text-align:center}
   .chips{display:flex;flex-wrap:wrap;gap:9px}
   .chip{background:var(--card);border:1px solid var(--line);border-radius:30px;padding:9px 15px;font-size:13.5px}
   .chip b{color:var(--green)}
@@ -398,14 +407,89 @@
 <section id="history"><div class="wrap">
   <div class="eyebrow">⏳ THE ROAD TO HERE</div>
   <h2>A Quick <span class="em">History of Gaming</span></h2>
-  <p class="lead">This little handheld is a time machine — every era of gaming in one place. Here's the journey it covers.</p>
-  <div class="eras">
-    <div class="era"><img src="images/era-atari.png" alt=""><div><div class="yr">1977</div><h4>Where it all began</h4><p>The Atari 2600 brought arcade games home and lit the fuse for everything that followed.</p></div></div>
-    <div class="era"><img src="images/smb3.png" alt=""><div><div class="yr">1985</div><h4>The NES saves gaming</h4><p>After a crash nearly killed the industry, Nintendo rebuilt it — Mario, Zelda &amp; Metroid were all born here.</p></div></div>
-    <div class="era"><img src="images/sonic-2.png" alt=""><div><div class="yr">1991</div><h4>The 16-bit war</h4><p>SNES vs. Genesis. Mario vs. Sonic. The rivalry that pushed both to greatness.</p></div></div>
-    <div class="era"><img src="images/tetris.png" alt=""><div><div class="yr">1989→</div><h4>Gaming goes portable</h4><p>Game Boy → GBA put real games in a pocket for the first time. This handheld is the heir to that whole line.</p></div></div>
-    <div class="era"><img src="images/mgs.png" alt=""><div><div class="yr">1997</div><h4>Games grow up &amp; go 3D</h4><p>The PlayStation brought cinema and polygons. Gaming became a mainstream art form.</p></div></div>
-  </div>
+  <p class="lead">This little handheld is a time machine. Here's the whole journey it covers — era by era, with a taste of what each one gave the world.</p>
+
+  <div class="era2"><div class="hd"><span class="yr">1977–84</span><h4>The Atari Age — and the Crash</h4></div>
+    <p>Arcade hits came home and an industry was born... then nearly died in the great crash of 1983.</p>
+    <div class="strip">
+      <div class="t"><img src="images/era-atari.png" alt=""><span>Pitfall!</span></div>
+      <div class="t"><img src="images/era-asteroids.png" alt=""><span>Asteroids</span></div>
+      <div class="t"><img src="images/era-adventure.png" alt=""><span>Adventure</span></div>
+      <div class="t"><img src="images/era-mspac.png" alt=""><span>Ms. Pac-Man</span></div>
+    </div></div>
+
+  <div class="era2"><div class="hd"><span class="yr">1985–88</span><h4>Nintendo Saves Gaming</h4></div>
+    <p>The NES rebuilt the whole industry from the ashes — and minted the icons that still rule it today.</p>
+    <div class="strip">
+      <div class="t"><img src="images/smb3.png" alt=""><span>Super Mario Bros. 3</span></div>
+      <div class="t"><img src="images/zelda-1.png" alt=""><span>The Legend of Zelda</span></div>
+      <div class="t"><img src="images/mega-man-2.png" alt=""><span>Mega Man 2</span></div>
+      <div class="t"><img src="images/ducktales.png" alt=""><span>DuckTales</span></div>
+      <div class="t"><img src="images/sport-miketyson.png" alt=""><span>Punch-Out!!</span></div>
+      <div class="t"><img src="images/kirbys-adventure.png" alt=""><span>Kirby's Adventure</span></div>
+    </div></div>
+
+  <div class="era2"><div class="hd"><span class="yr">1989–90</span><h4>Gaming Goes Portable</h4></div>
+    <p>The Game Boy put real games in a pocket for the first time — and Tetris turned it into a worldwide craze.</p>
+    <div class="strip">
+      <div class="t"><img src="images/tetris.png" alt=""><span>Tetris</span></div>
+      <div class="t"><img src="images/era-sml.png" alt=""><span>Super Mario Land</span></div>
+      <div class="t"><img src="images/hack-kirby-dx.png" alt=""><span>Kirby's Dream Land</span></div>
+      <div class="t"><img src="images/era-la.png" alt=""><span>Link's Awakening</span></div>
+    </div></div>
+
+  <div class="era2"><div class="hd"><span class="yr">1991–94</span><h4>The 16-Bit War</h4></div>
+    <p>SNES vs. Genesis. Mario vs. Sonic. The fiercest rivalry in gaming pushed both sides to greatness.</p>
+    <div class="strip">
+      <div class="t"><img src="images/super-mario-world.png" alt=""><span>Super Mario World</span></div>
+      <div class="t"><img src="images/sonic-2.png" alt=""><span>Sonic 2</span></div>
+      <div class="t"><img src="images/zelda-alttp.png" alt=""><span>A Link to the Past</span></div>
+      <div class="t"><img src="images/super-metroid.png" alt=""><span>Super Metroid</span></div>
+      <div class="t"><img src="images/streets-of-rage-2.png" alt=""><span>Streets of Rage 2</span></div>
+      <div class="t"><img src="images/dkc2.png" alt=""><span>Donkey Kong Country 2</span></div>
+    </div></div>
+
+  <div class="era2"><div class="hd"><span class="yr">1994–97</span><h4>RPGs Come of Age</h4></div>
+    <p>The genre hit its golden age — vast worlds and stories that proved games could genuinely move people.</p>
+    <div class="strip">
+      <div class="t"><img src="images/chrono-trigger.png" alt=""><span>Chrono Trigger</span></div>
+      <div class="t"><img src="images/earthbound.png" alt=""><span>EarthBound</span></div>
+      <div class="t"><img src="images/hack-ff6-bnw.png" alt=""><span>Final Fantasy VI</span></div>
+      <div class="t"><img src="images/strat-fft.png" alt=""><span>FF Tactics</span></div>
+      <div class="t"><img src="images/ff7.png" alt=""><span>Final Fantasy VII</span></div>
+    </div></div>
+
+  <div class="era2"><div class="hd"><span class="yr">1995–99</span><h4>The 3D Revolution</h4></div>
+    <p>The PlayStation and N64 brought polygons, cinema, and a whole new dimension. Gaming grew up fast.</p>
+    <div class="strip">
+      <div class="t"><img src="images/port-sm64.png" alt=""><span>Super Mario 64</span></div>
+      <div class="t"><img src="images/mgs.png" alt=""><span>Metal Gear Solid</span></div>
+      <div class="t"><img src="images/crash-warped.png" alt=""><span>Crash Bandicoot</span></div>
+      <div class="t"><img src="images/spyro.png" alt=""><span>Spyro</span></div>
+      <div class="t"><img src="images/tekken-3.png" alt=""><span>Tekken 3</span></div>
+      <div class="t"><img src="images/race-gt.png" alt=""><span>Gran Turismo</span></div>
+    </div></div>
+
+  <div class="era2"><div class="hd"><span class="yr">2001–05</span><h4>The Handheld Renaissance</h4></div>
+    <p>The Game Boy Advance crammed console-quality classics into a pocket. A golden age, made portable.</p>
+    <div class="strip">
+      <div class="t"><img src="images/pokemon-emerald.png" alt=""><span>Pokémon Emerald</span></div>
+      <div class="t"><img src="images/metroid-zero-mission.png" alt=""><span>Metroid: Zero Mission</span></div>
+      <div class="t"><img src="images/golden-sun.png" alt=""><span>Golden Sun</span></div>
+      <div class="t"><img src="images/strat-advwars.png" alt=""><span>Advance Wars</span></div>
+      <div class="t"><img src="images/mario-luigi.png" alt=""><span>Mario &amp; Luigi</span></div>
+      <div class="t"><img src="images/hack-mother3.png" alt=""><span>Mother 3</span></div>
+    </div></div>
+
+  <div class="era2"><div class="hd"><span class="yr">Today</span><h4>Kept Alive by Fans</h4></div>
+    <p>Decades on, a devoted community keeps these classics thriving — colorizing them, perfecting them, and building brand-new games inside them.</p>
+    <div class="strip">
+      <div class="t"><img src="images/sonic-3-complete.png" alt=""><span>Sonic 3 Complete</span></div>
+      <div class="t"><img src="images/hack-crystal-clear.png" alt=""><span>Crystal Clear</span></div>
+      <div class="t"><img src="images/metroid-2-color.png" alt=""><span>Metroid II Color</span></div>
+      <div class="t"><img src="images/rg-xeno.png" alt=""><span>Xeno Crisis</span></div>
+      <div class="t"><img src="images/apotris.png" alt=""><span>Apotris</span></div>
+    </div></div>
 </div></section>
 
 <!-- MOOD -->
