@@ -39,7 +39,7 @@
   .stat b{font-family:'Bebas Neue';font-size:28px;color:var(--maroon);display:block;line-height:1}
   .stat span{font-size:11px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase}
 
-  section{padding:44px 0;border-bottom:1px solid var(--line)}
+  section{padding:44px 0;border-bottom:1px solid var(--line);scroll-margin-top:56px}
   .eyebrow{font-family:'Press Start 2P';font-size:10px;color:var(--maroon);letter-spacing:1px}
   h2{font-family:'Bebas Neue';font-size:clamp(34px,6.5vw,60px);letter-spacing:1px;margin:6px 0 4px;line-height:.95;color:var(--screen-dk)}
   h2 .em{color:var(--maroon)}
@@ -99,12 +99,21 @@
   footer .big{font-family:'Press Start 2P';font-size:13px;color:var(--maroon);margin-bottom:10px}
 
   @media (max-width:640px){
-    .wrap{padding:0 14px} section{padding:34px 0}
-    .os{grid-template-columns:1fr}
-    .grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
-    .grid3{grid-template-columns:repeat(2,1fr);gap:12px}
-    h1.logo{box-shadow:3px 3px 0 var(--maroon);padding:16px 12px}
-    .banner{box-shadow:3px 3px 0 var(--screen)}
+    .wrap{padding:0 13px}
+    section{padding:30px 0;scroll-margin-top:52px}
+    header.hero{padding:30px 0 24px}
+    h1.logo{padding:15px 12px;margin-top:12px;box-shadow:3px 3px 0 var(--maroon)}
+    .hero p.sub{margin-top:14px} .stat b{font-size:23px}
+    .eyebrow{font-size:9px}
+    .os{grid-template-columns:1fr;gap:14px}
+    .grid,.grid3{grid-template-columns:repeat(2,1fr);gap:11px}
+    .genre{padding:14px;border-radius:10px}
+    .genre-head h3{font-size:24px}
+    .banner{padding:18px;box-shadow:3px 3px 0 var(--screen)}
+    .era2{padding:13px}
+    .era2 .strip{grid-template-columns:repeat(3,1fr);gap:8px}
+    .era2 .t span{font-size:9.5px}
+    .chip{font-size:13px}
   }
   @media print{
     body{background:#fff} body::before,nav.jump{display:none}
