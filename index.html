@@ -3,128 +3,116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0b0118">
+<meta name="theme-color" content="#9bbc0f">
 <title>The Collection — The Greatest Games Ever Made</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Ctext%20y='13'%20font-size='13'%3E%F0%9F%8E%AE%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#0b0118;--ink:#f3eaff;--muted:#b39ddb;--cyan:#27e7ff;--pink:#ff2e88;--yellow:#ffd23f;--green:#41f7a7;--purple:#a06bff;--card:#1a0a3a;--line:#3a1d6e}
+  :root{
+    --bg:#ffffff; --paper:#ffffff; --shell:#e7e8da; --soft:#f3f4ea;
+    --screen:#9bbc0f; --screen-dk:#0f380f; --ink:#23271d; --muted:#5f6b53;
+    --line:#cdd0bd; --maroon:#b1325f; --gold:#b07d12;
+  }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#2a0a4f 0,transparent 60%),radial-gradient(900px 500px at 0% 8%,#15234f 0,transparent 55%),var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
-  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;background:repeating-linear-gradient(transparent 0 2px,rgba(0,0,0,.18) 2px 3px);mix-blend-mode:overlay;opacity:.45}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:15px 15px;opacity:.35}
   .wrap{max-width:1080px;margin:0 auto;padding:0 20px;position:relative;z-index:2}
-  a{color:var(--cyan);text-decoration:none}
+  a{color:var(--maroon);text-decoration:none}
   .muted{color:var(--muted)}
 
-  nav.jump{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);background:rgba(11,1,24,.82);border-bottom:1px solid var(--line)}
+  nav.jump{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:3px solid var(--screen-dk)}
   nav.jump .scroll{display:flex;gap:8px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
   nav.jump .scroll::-webkit-scrollbar{display:none}
-  nav.jump a{flex:0 0 auto;font-size:12.5px;font-weight:700;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:20px;padding:7px 13px;white-space:nowrap}
-  nav.jump a:hover{border-color:var(--cyan);color:var(--cyan)}
+  nav.jump a{flex:0 0 auto;font-size:12.5px;font-weight:800;color:var(--screen-dk);background:var(--shell);border:1px solid var(--line);border-radius:6px;padding:7px 12px;white-space:nowrap}
+  nav.jump a:hover{background:var(--screen-dk);color:var(--screen);border-color:var(--screen-dk)}
 
-  header.hero{padding:54px 0 28px;text-align:center}
-  .kicker{font-family:'Press Start 2P';font-size:11px;color:var(--yellow);letter-spacing:1px}
-  h1.logo{font-family:'Press Start 2P';font-size:clamp(24px,6vw,50px);line-height:1.25;margin:18px 0 8px;color:#fff;text-shadow:3px 3px 0 var(--pink),6px 6px 0 var(--cyan)}
-  .hero p.sub{font-size:clamp(15px,2.4vw,20px);color:var(--ink);max-width:680px;margin:14px auto 0;font-weight:600}
-  .hero p.sub b{color:var(--green)}
+  header.hero{padding:46px 0 30px;text-align:center;background:var(--shell);border-bottom:3px solid var(--screen-dk)}
+  .kicker{font-family:'Press Start 2P';font-size:11px;color:var(--maroon);letter-spacing:1px}
+  h1.logo{font-family:'Press Start 2P';font-size:clamp(19px,5.2vw,42px);line-height:1.32;margin:18px auto 8px;max-width:660px;color:var(--screen-dk);background:var(--screen);border:3px solid var(--screen-dk);border-radius:10px;padding:22px 18px;box-shadow:5px 5px 0 var(--maroon)}
+  .hero p.sub{font-size:clamp(15px,2.4vw,19px);color:var(--ink);max-width:660px;margin:18px auto 0;font-weight:600}
+  .hero p.sub b{color:var(--maroon)}
   .stat-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:22px 0 4px}
-  .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 15px}
-  .stat b{font-family:'Bebas Neue';font-size:28px;color:var(--green);display:block;line-height:1}
+  .stat{background:var(--paper);border:2px solid var(--screen-dk);border-radius:8px;padding:8px 16px}
+  .stat b{font-family:'Bebas Neue';font-size:28px;color:var(--maroon);display:block;line-height:1}
   .stat span{font-size:11px;color:var(--muted);letter-spacing:.5px;text-transform:uppercase}
 
-  section{padding:46px 0;border-bottom:1px solid var(--line)}
-  .eyebrow{font-family:'Press Start 2P';font-size:10px;color:var(--cyan);letter-spacing:1px}
-  h2{font-family:'Bebas Neue';font-size:clamp(34px,6.5vw,62px);letter-spacing:1px;margin:6px 0 4px;line-height:.95}
-  h2 .em{color:var(--pink)}
+  section{padding:44px 0;border-bottom:1px solid var(--line)}
+  .eyebrow{font-family:'Press Start 2P';font-size:10px;color:var(--maroon);letter-spacing:1px}
+  h2{font-family:'Bebas Neue';font-size:clamp(34px,6.5vw,60px);letter-spacing:1px;margin:6px 0 4px;line-height:.95;color:var(--screen-dk)}
+  h2 .em{color:var(--maroon)}
   .lead{color:var(--muted);max-width:780px;font-size:16px;margin:0 0 24px}
 
-  /* generic cards */
   .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(168px,1fr))}
   .grid3{display:grid;gap:14px;grid-template-columns:repeat(3,1fr)}
-  .card{background:linear-gradient(180deg,var(--card),#11062b);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s}
-  .card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(160,107,255,.35);border-color:var(--purple)}
-  .art{aspect-ratio:1/1;background:#070213;display:flex;align-items:center;justify-content:center;padding:9px}
-  .art img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 4px 10px rgba(0,0,0,.6))}
+  .card{background:var(--paper);border:2px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;transition:transform .12s,box-shadow .12s,border-color .12s}
+  .card:hover{transform:translateY(-3px);border-color:var(--screen-dk);box-shadow:4px 4px 0 var(--screen)}
+  .art{aspect-ratio:1/1;background:var(--soft);display:flex;align-items:center;justify-content:center;padding:9px;border-bottom:1px solid var(--line)}
+  .art img{max-width:100%;max-height:100%;object-fit:contain}
   .card .meta{padding:11px 13px 14px}
-  .card .name{font-weight:800;font-size:14.5px;line-height:1.2}
-  .card .sys{font-size:10.5px;color:var(--yellow);text-transform:uppercase;letter-spacing:.4px;margin-top:3px}
+  .card .name{font-weight:800;font-size:14.5px;line-height:1.2;color:var(--ink)}
+  .card .sys{font-size:10.5px;color:var(--maroon);text-transform:uppercase;letter-spacing:.4px;margin-top:3px;font-weight:700}
   .card .blurb{color:var(--muted);font-size:13px;margin-top:7px}
-  .tag{display:inline-block;font-size:10.5px;font-weight:700;color:var(--bg);background:var(--cyan);padding:2px 8px;border-radius:20px;margin-top:9px}
-  .tag.hack{background:var(--pink);color:#fff}
+  .tag{display:inline-block;font-size:10.5px;font-weight:800;color:var(--screen-dk);background:var(--screen);padding:2px 8px;border-radius:5px;margin-top:9px}
+  .tag.hack{background:var(--maroon);color:#fff}
 
-  /* TOP 10 */
-  .legend{display:grid;grid-template-columns:56px 104px 1fr;gap:16px;align-items:center;background:linear-gradient(90deg,#1c0a3f,#11062b);border:1px solid var(--line);border-radius:14px;padding:14px;margin:11px 0}
-  .legend:hover{border-color:var(--yellow)}
-  .legend .rank{font-family:'Press Start 2P';font-size:23px;color:var(--yellow);text-align:center;text-shadow:2px 2px 0 var(--pink)}
-  .legend img{width:100%;border-radius:8px;background:#070213}
-  .legend h3{margin:0;font-family:'Bebas Neue';font-size:25px;color:#fff;letter-spacing:.5px;line-height:1}
-  .legend .sys{font-size:11px;color:var(--yellow);text-transform:uppercase}
-  .legend p{margin:6px 0 0;color:var(--ink);font-size:14.5px}
-
-  /* GENRE PILLS + BLOCKS */
   .genre-pills{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 22px}
-  .pill{background:var(--card);border:1px solid var(--line);border-radius:30px;padding:8px 15px;font-weight:700;font-size:13.5px;color:var(--ink)}
-  .pill:hover{border-color:var(--cyan);color:var(--cyan)}
-  .genre{background:linear-gradient(180deg,#160830,#0d0322);border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0;scroll-margin-top:64px}
-  .genre-head h3{font-family:'Bebas Neue';font-size:27px;margin:0;color:#fff;letter-spacing:.5px}
+  .pill{background:var(--maroon);border:2px solid var(--maroon);border-radius:30px;padding:8px 15px;font-weight:800;font-size:13px;color:#fff}
+  .pill:hover{background:#fff;color:var(--maroon)}
+  .genre{background:var(--soft);border:2px solid var(--line);border-radius:12px;padding:18px;margin:16px 0;scroll-margin-top:64px}
+  .genre-head h3{font-family:'Bebas Neue';font-size:27px;margin:0;color:var(--screen-dk);letter-spacing:.5px}
   .genre-head p{margin:2px 0 14px;color:var(--muted);font-size:14px}
   .also{margin:14px 0 0;font-size:13.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
-  .also b{color:var(--green)}
+  .also b{color:var(--maroon)}
 
-  .subhead{font-family:'Bebas Neue';font-size:23px;color:var(--green);letter-spacing:.6px;margin:26px 0 12px;border-bottom:1px solid var(--line);padding-bottom:6px}
+  .subhead{font-family:'Bebas Neue';font-size:23px;color:var(--screen-dk);letter-spacing:.6px;margin:26px 0 12px;border-bottom:2px solid var(--screen);padding-bottom:6px}
   .subhead small{font-family:'Inter';font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:0;margin-left:8px}
-  .box{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--cyan);border-radius:10px;padding:14px}
-  .box.c2{border-left-color:var(--pink)}.box.c3{border-left-color:var(--green)}.box.c4{border-left-color:var(--yellow)}
-  .box h4{margin:0 0 5px;font-size:16px;color:#fff}
-  .box .star{font-size:10.5px;color:var(--green);font-weight:800;margin-left:6px}
-  kbd{font-family:'Press Start 2P';font-size:9px;background:#000;border:1px solid var(--purple);border-radius:5px;padding:3px 6px;color:var(--green)}
+  .box{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--screen-dk);border-radius:8px;padding:14px}
+  .box.c2{border-left-color:var(--maroon)}.box.c3{border-left-color:var(--gold)}.box.c4{border-left-color:var(--maroon)}
+  .box h4{margin:0 0 5px;font-size:16px;color:var(--ink)}
+  .box .star{font-size:10.5px;color:var(--maroon);font-weight:800;margin-left:6px}
+  kbd{font-family:'Press Start 2P';font-size:9px;background:var(--screen-dk);border:1px solid var(--screen-dk);border-radius:4px;padding:3px 6px;color:var(--screen)}
   .os{display:grid;grid-template-columns:1fr .8fr;gap:20px;align-items:start}
   .os-steps{display:grid;gap:12px}
-  .os-cheat{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px;text-align:center}
-  .os-cheat img{width:100%;max-width:420px;border-radius:8px}
+  .os-cheat{margin:0;background:var(--paper);border:2px solid var(--line);border-radius:10px;padding:13px;text-align:center}
+  .os-cheat img{width:100%;max-width:420px;border-radius:6px}
   .os-cheat figcaption{font-size:12.5px;color:var(--muted);margin-top:9px}
-  .eras{display:grid;gap:14px}
-  .era{display:grid;grid-template-columns:96px 1fr;gap:16px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px}
-  .era img{width:100%;border-radius:8px;background:#070213}
-  .era .yr{font-family:'Bebas Neue';font-size:24px;color:var(--yellow);line-height:1}
-  .era h4{margin:2px 0 4px;font-size:17px;color:#fff}
-  .era p{margin:0;color:var(--muted);font-size:13.5px}
-  .era2{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin:13px 0}
+
+  .era2{background:var(--paper);border:2px solid var(--line);border-radius:10px;padding:16px;margin:13px 0}
   .era2 .hd{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-  .era2 .yr{font-family:'Bebas Neue';font-size:25px;color:var(--yellow);line-height:1}
-  .era2 h4{margin:0;font-size:18px;color:#fff}
+  .era2 .yr{font-family:'Bebas Neue';font-size:25px;color:var(--maroon);line-height:1}
+  .era2 h4{margin:0;font-size:18px;color:var(--screen-dk)}
   .era2 p{margin:5px 0 13px;color:var(--muted);font-size:13.5px}
   .era2 .strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:9px}
-  .era2 .t{background:#070213;border:1px solid var(--line);border-radius:8px;padding:6px}
+  .era2 .t{background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:6px}
   .era2 .t img{width:100%;aspect-ratio:1;object-fit:contain}
   .era2 .t span{display:block;font-size:9px;color:var(--muted);margin-top:4px;line-height:1.15;text-align:center}
+
   .chips{display:flex;flex-wrap:wrap;gap:9px}
-  .chip{background:var(--card);border:1px solid var(--line);border-radius:30px;padding:9px 15px;font-size:13.5px}
-  .chip b{color:var(--green)}
-  .banner{border-radius:16px;padding:26px;border:1px dashed var(--purple);background:linear-gradient(120deg,#1c0a3f,#0e1f44)}
+  .chip{background:var(--shell);border:1px solid var(--line);border-radius:30px;padding:9px 15px;font-size:13.5px}
+  .chip b{color:var(--maroon)}
+  .banner{border-radius:12px;padding:26px;border:3px solid var(--screen-dk);background:#eef3d6;box-shadow:6px 6px 0 var(--screen)}
   .banner h2{margin-top:0}
   footer{padding:40px 0 64px;text-align:center;color:var(--muted)}
-  footer .big{font-family:'Press Start 2P';font-size:13px;color:var(--yellow);margin-bottom:10px}
+  footer .big{font-family:'Press Start 2P';font-size:13px;color:var(--maroon);margin-bottom:10px}
 
   @media (max-width:640px){
     .wrap{padding:0 14px} section{padding:34px 0}
     .os{grid-template-columns:1fr}
     .grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
     .grid3{gap:9px}
-    .legend{grid-template-columns:36px 74px 1fr;gap:11px;padding:11px}
-    .legend .rank{font-size:17px} .legend h3{font-size:21px}
-    .era{grid-template-columns:74px 1fr;gap:11px}
-    h1.logo{text-shadow:2px 2px 0 var(--pink),4px 4px 0 var(--cyan)}
+    h1.logo{box-shadow:3px 3px 0 var(--maroon);padding:16px 12px}
+    .banner{box-shadow:3px 3px 0 var(--screen)}
   }
   @media print{
-    body{background:#fff;color:#111} body::before,nav.jump{display:none}
-    a,h1.logo,h2,h2 .em{color:#111} h1.logo{text-shadow:none}
-    .card,.legend,.genre,.box,.banner,.stat,.chip,.era,.os-cheat,.pill{border-color:#bbb;background:#fafafa;box-shadow:none;break-inside:avoid}
-    .art,.legend img,.era img{background:#fff}
-    .lead,.muted,.card .blurb,.legend p,.era p,.also,.os-cheat figcaption,.genre-head p{color:#333}
-    section{border-color:#ddd;padding:22px 0}
+    body{background:#fff} body::before,nav.jump{display:none}
+    a,h2,h2 .em,.genre-head h3,.era2 h4{color:#111}
+    h1.logo{box-shadow:none;background:#fff;color:#111}
+    .card,.genre,.box,.banner,.stat,.chip,.era2,.era2 .t,.os-cheat,.pill{box-shadow:none;break-inside:avoid}
+    .pill{color:#111;background:#fff}
+    section{padding:22px 0}
   }
 </style>
 </head>
@@ -145,7 +133,6 @@
     <div class="stat"><b>280+</b><span>Games</span></div>
     <div class="stat"><b>10</b><span>Systems</span></div>
     <div class="stat"><b>30</b><span>Years of legends</span></div>
-    <div class="stat"><b>20+</b><span>Fan-made gems</span></div>
   </div>
 </div></header>
 
@@ -325,7 +312,7 @@
 
 <!-- ROM HACKS (the exception — full coverage) -->
 <section id="hacks"><div class="wrap banner">
-  <div class="eyebrow" style="color:var(--pink)">🧪 THE SECRET MENU</div>
+  <div class="eyebrow" style="color:var(--maroon)">🧪 THE SECRET MENU</div>
   <h2>ROM <span class="em">Hacks</span></h2>
   <p class="lead">This is what makes the collection truly special — and none of it exists on any store shelf.
   <b>ROM hacks</b> are games fans rebuilt by hand: colorizing old black-and-white classics, fixing
